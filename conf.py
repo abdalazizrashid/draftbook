@@ -10,16 +10,16 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('sphinxext'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Notebook'
-copyright = '2020, Abdalziz Rashid'
-author = 'Abdalziz Rashid'
+project = 'Draftbook'
+copyright = '2020, Abdalaziz Rashid'
+author = 'Abdalaziz Rashid'
 
 
 # -- General configuration ---------------------------------------------------
@@ -27,8 +27,26 @@ author = 'Abdalziz Rashid'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax'
 ]
+
+#extensions = ['matplotlib.sphinxext.plot_directive',
+#                  'IPython.sphinxext.ipython_directive',
+#                  'IPython.sphinxext.ipython_console_highlighting',
+#                  'sphinx.ext.mathjax',
+#                  'sphinx.ext.autodoc',
+#                  'sphinx.ext.doctest',
+#                  'sphinx.ext.inheritance_diagram',
+#                  'numpydoc']
+#
+
+#extensions.append('sphinx.ext.jsmath')
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -44,7 +62,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = "sphinx_book_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
