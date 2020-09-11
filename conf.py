@@ -29,13 +29,36 @@ author = 'Abdalaziz Rashid'
 # ones.
 
 extensions = [
+    'matplotlib.sphinxext.plot_directive',
+    'IPython.sphinxext.ipython_directive',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'sphinx.ext.doctest',
+    'sphinx.ext.inheritance_diagram',
+    'numpydoc',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.mathjax'
-]
+    'sphinx.ext.mathjax',
+    'sphinx_math_dollar',
+    'sphinx.ext.mathjax',
+    'sphinx_math_dollar'
+    ]
 
+mathjax_config = {
+    'tex2jax': {
+    'inlineMath': [ ["\\(","\\)"] ],
+    'displayMath': [["\\[","\\]"] ],
+    },
+    'TeX': {
+    'Macros': {
+      'b': [r"{\mathbf #1}",1],
+      'bb': [r'{\mathbb{#1}}', 1],
+      'vertbar': r"\rule[-1ex]{0.5pt}{2.5ex}",
+      'horzbar': r"\rule[.5ex]{2.5ex}{0.5pt}"
+    }
+  }
+}
 #extensions = ['matplotlib.sphinxext.plot_directive',
 #                  'IPython.sphinxext.ipython_directive',
 #                  'IPython.sphinxext.ipython_console_highlighting',
@@ -68,3 +91,25 @@ html_theme = "sphinx_book_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+latex_engine = 'xelatex'
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    'papersize': 'a4paper',
+    'releasename':" ",
+    # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
+    # 'fncychap': '\\usepackage[Lenny]{fncychap}',
+    'fncychap': '\\usepackage{fncychap}',
+    'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
+
+    'figure_align':'htbp',
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    'pointsize': '10pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    }
+
+

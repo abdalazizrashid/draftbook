@@ -10,7 +10,8 @@ General Advice for Linear-Regression Priors
   Gaussian centered on zero, scale should be so extreme for
   regularization.
 
-* Scale :math:`\sigma` 
+* Scale :math:`\bb{R,Q, Z} \RR \sigma \bold{R}` 
   Uniform with reasonable upper bound, we may use Cauchy or
   exponential for regularization.
+
 

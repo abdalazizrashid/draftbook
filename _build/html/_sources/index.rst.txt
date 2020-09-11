@@ -11,11 +11,12 @@ A Draftbook
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
    1.rst
-
+   probability.rst
+   linalg.rst
 
 Indices and tables
 ==================
@@ -23,3 +24,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
