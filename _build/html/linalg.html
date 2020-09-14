@@ -146,8 +146,39 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix">
-   Matrix
+  <a class="reference internal nav-link" href="#matrices">
+   Matrices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-geometry-of-linear-equations">
+     The Geometry of Linear Equations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matrix-form">
+       Matrix Form
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#row-picture">
+         Row Picture
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#column-picture">
+         Column Picture
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elimination">
+   Elimination
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -177,8 +208,8 @@
                 
   <div class="section" id="linear-algebra">
 <h1>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="matrix">
-<h2>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="matrices">
+<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h2>
 <p>A matrix is a linear function that maps vectors to vectors <span class="math notranslate nohighlight">\(A\b{x}=\b{y}\)</span>.
 Here <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(m\times n, \b{x} \in \bb{R}^n \text{and } y \in \bb{R}^m\)</span>.
 A matrix apply a linear transformating that rotate and strech a vector.</p>
@@ -194,6 +225,83 @@ f(\textbf{x}) &amp;= f(x_1 \textbf{e}_1 + x_2 \textbf{e}_2 + \dots + x_n \textbf
 \\
 &amp;= \left[\begin{array}{c|c|c|c} f(\textbf{e}_1) &amp; f(\textbf{e}_2) &amp; \dots &amp; f(\textbf{e}_n) \end{array}\right] \textbf{x}
 \end{align}\end{split}\]</div>
+<div class="section" id="the-geometry-of-linear-equations">
+<h3>The Geometry of Linear Equations<a class="headerlink" href="#the-geometry-of-linear-equations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="matrix-form">
+<h4>Matrix Form<a class="headerlink" href="#matrix-form" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{4}
+&amp;2x-y&amp;&amp;=0\\
+&amp;-x+2y&amp;&amp;=3\\
+&amp;\begin{bmatrix}
+  2   &amp;   -1\\
+  -1   &amp;    2\\
+\end{bmatrix}
+&amp;\begin{bmatrix}
+    x\\
+    y\\
+\end{bmatrix}
+&amp;=
+\begin{bmatrix}
+  0\\
+  3\\
+\end{bmatrix}\\
+&amp;A &amp; \b{x} &amp;= b
+\end{alignat*}\end{split}\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Fix alignment of equations</p>
+</div>
+<div class="section" id="row-picture">
+<h5>Row Picture<a class="headerlink" href="#row-picture" title="Permalink to this headline">¶</a></h5>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Add Row picture plot</p>
+</div>
+</div>
+<div class="section" id="column-picture">
+<h5>Column Picture<a class="headerlink" href="#column-picture" title="Permalink to this headline">¶</a></h5>
+<div class="math notranslate nohighlight">
+\[\begin{split}x \begin{bmatrix} 2 \\ -1 \end{bmatrix} +
+y \begin{bmatrix} -1 \\ 2 \end{bmatrix} =
+\begin{bmatrix} 0 \\ 3 \end{bmatrix}\end{split}\]</div>
+<p>So we need to take the right combination to produce <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 \\ 2 \end{bmatrix}\)</span>
+Let’s take <span class="math notranslate nohighlight">\(x=1, y=2\)</span>. Thus the idea of linear combination is crucial.
+If we took all the possible linear combination of <span class="math notranslate nohighlight">\(x\)</span>’s and <span class="math notranslate nohighlight">\(y\)</span>’s. What will be the results?
+The results would be that we could get any RHS at all, the combination of x
+<span class="math notranslate nohighlight">\(\begin{bmatrix} 2\\ -1 \end{bmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bmatrix}\)</span> would fill the
+whole plane.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Add column picture plot</p>
+</div>
+<p>Basically the interpretation of this is to combine the vector <span class="math notranslate nohighlight">\(\begin{bmatrix} 2\\ -1 \end{bmatrix}\)</span>
+with <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bmatrix}\)</span> with the right amount to find
+<span class="math notranslate nohighlight">\(\begin{bmatrix} 0\\ 3 \end{bmatrix}\)</span>, in other words it’s a <strong>Linear Combination</strong> of the columns.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="elimination">
+<h2>Elimination<a class="headerlink" href="#elimination" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+  1   &amp;   2   &amp;   1\\
+  3   &amp;   8   &amp;   1\\
+  0   &amp;   4   &amp;   1\\
+\end{bmatrix}
+\rightarrow (\times 3)
+\begin{bmatrix}
+  1   &amp;   2   &amp;   1\\
+  0   &amp;   2   &amp;   -2\\
+  0   &amp;   4   &amp;   1\\
+\end{bmatrix}
+\rightarrow (\times 2)
+ \begin{bmatrix}
+  1   &amp;   2   &amp;   1\\
+  0   &amp;   2   &amp;   -2\\
+  0   &amp;   0   &amp;   -5\\
+\end{bmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="eigen-vectors-and-eigen-values">
 <h2>Eigen-vectors and Eigen-values<a class="headerlink" href="#eigen-vectors-and-eigen-values" title="Permalink to this headline">¶</a></h2>
@@ -304,7 +412,7 @@ a component of <span class="math notranslate nohighlight">\(b\)</span>, now is t
 <p>Then if we act with <span class="math notranslate nohighlight">\(A=S\Lambda S^{-1}\)</span> on <span class="math notranslate nohighlight">\(x\)</span> we get</p>
 <div class="math notranslate nohighlight">
 \[Ax=S\Lambda (S^{-1}x)\]</div>
-<p>This can be intereprted, reading from right to left, as saying that:</p>
+<p>This can be interpreted, reading from right to left, as saying that:</p>
 <ol class="arabic simple">
 <li><p>change the basis to that of the eigen-vectors to find new components of <span class="math notranslate nohighlight">\(x\)</span> in that basis as
 <span class="math notranslate nohighlight">\(S^{-1}x\)</span>;</p></li>

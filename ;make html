@@ -28,7 +28,7 @@ Matrix Form
 ^^^^^^^^^^^
 
 .. math::
-  \begin{alignat*}{4}
+  \begin{alignat*}{2}
   &2x-y&&=0\\
   &-x+2y&&=3\\
   &\begin{bmatrix}
@@ -45,66 +45,20 @@ Matrix Form
     3\\
   \end{bmatrix}\\
   &A & \b{x} &= b
-  \end{alignat*}
+  \end{alignat*}{2}
 
-.. warning:: Fix alignment of equations
+
+
+
+
 
 
 
 Row Picture
 """""""""""
-.. warning:: Add Row picture plot
-
 
 Column Picture
 """"""""""""""
-.. math:: 
-  x \begin{bmatrix} 2 \\ -1 \end{bmatrix} +
-  y \begin{bmatrix} -1 \\ 2 \end{bmatrix} =
-  \begin{bmatrix} 0 \\ 3 \end{bmatrix}
-
-So we need to take the right combination to produce $\begin{bmatrix} 0 \\ 2 \end{bmatrix}$
-Let's take $x=1, y=2$. Thus the idea of linear combination is crucial.
-If we took all the possible linear combination of $x$'s and $y$'s. What will be the results?
-The results would be that we could get any RHS at all, the combination of x 
-$\begin{bmatrix} 2\\ -1 \end{bmatrix}$, $\begin{bmatrix} -1\\ 2 \end{bmatrix}$ would fill the 
-whole plane.
-
-.. warning:: Add column picture plot
-
-Basically the interpretation of this is to combine the vector $\begin{bmatrix} 2\\ -1 \end{bmatrix}$ 
-with $\begin{bmatrix} -1\\ 2 \end{bmatrix}$ with the right amount to find 
-$\begin{bmatrix} 0\\ 3 \end{bmatrix}$, in other words it's a **Linear Combination** of the columns.
-
-
-
-
-
-
-
-
-Elimination
-===========
-
-.. math:: 
-  \begin{bmatrix}
-    1   &   2   &   1\\
-    3   &   8   &   1\\
-    0   &   4   &   1\\
-  \end{bmatrix}
-  \rightarrow (\times 3)
-  \begin{bmatrix}
-    1   &   2   &   1\\
-    0   &   2   &   -2\\
-    0   &   4   &   1\\
-  \end{bmatrix}
-  \rightarrow (\times 2)
-   \begin{bmatrix}
-    1   &   2   &   1\\
-    0   &   2   &   -2\\
-    0   &   0   &   -5\\
-  \end{bmatrix}
-
 
 
 Eigen-vectors and Eigen-values
@@ -235,7 +189,7 @@ Then if we act with $A=S\Lambda S^{-1}$ on $x$ we get
 
 .. math:: Ax=S\Lambda (S^{-1}x)
 
-This can be interpreted, reading from right to left, as saying that:
+This can be intereprted, reading from right to left, as saying that:
 
 1. change the basis to that of the eigen-vectors to find new components of $x$ in that basis as
    $S^{-1}x$;
