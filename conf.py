@@ -12,6 +12,7 @@
 #
 import os
 import sys
+import kentigern
 sys.path.insert(0, os.path.abspath('sphinxext'))
 
 
@@ -42,8 +43,16 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx_math_dollar',
     'sphinx.ext.mathjax',
-    'sphinx_math_dollar'
+    'sphinx_math_dollar',
+    'sphinx.ext.graphviz',
+    'sphinxcontrib.tikz',
     ]
+
+
+# 'pdf2svg', 'Netpbm', 'ImageMagick', 'GhostScript' 'pdf2svg'
+tikz_proc_suite = "ImageMagick"
+
+graphviz_output_format = 'svg'
 
 mathjax_config = {
     'tex2jax': {
@@ -55,7 +64,8 @@ mathjax_config = {
       'b': [r"{\mathbf #1}",1],
       'bb': [r'{\mathbb{#1}}', 1],
       'vertbar': r"\rule[-1ex]{0.5pt}{2.5ex}",
-      'horzbar': r"\rule[.5ex]{2.5ex}{0.5pt}"
+      'horzbar': r"\rule[.5ex]{2.5ex}{0.5pt}",
+      'distas': [r'{\overset{#1}{\sim}', 1],
     }
   }
 }
@@ -85,6 +95,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+#html_theme = "kentigern"
 html_theme = "sphinx_book_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -92,7 +103,7 @@ html_theme = "sphinx_book_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-latex_engine = 'xelatex'
+latex_engine = 'lualatex'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -110,6 +121,7 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
+    'preamble': '\\usepackage{tikz}',
     }
 
 

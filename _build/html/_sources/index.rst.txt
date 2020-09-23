@@ -11,12 +11,14 @@ A Draftbook
 ====================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Contents:
 
-   1.rst
-   probability.rst
-   linalg.rst
+   chapters/1.rst
+   chapters/probability.rst
+   chapters/linalg.rst
+   chapters/statistics.rst
+
 
 Indices and tables
 ==================

@@ -1,6 +1,35 @@
 ###############
 Linear Algebra
 ###############
+The Matrix Alphabet
+^^^^^^^^^^^^^^^^^^^^
+
+| $A$ Any Matrix
+| $C$ Circulant Matrix
+| $C$ Column Matrix
+| $D$ Diagonal Matrix
+| $F$ Fourier Matrix
+| $I$ Identity Matrix
+| $L$ Lower Triangular Matrix
+| $L$ Laplacian Matrix
+| $M$ Markov Matrix
+| $M$ Mixing Matrix
+| $P$ Projection Matrix
+| $P$ Probability Matrix
+| $P$ Perumutation Matrix
+| $Q$ Orthogonal Matrix
+| $R$ Upper Triangular Matrix
+| $R$ Row Matrix
+| $S$ Symetric Matrix
+| $S$ Sample Covariance Matrix
+| $T$ Tensor
+| $U$ Upper Triangular Matrix
+| $U$ Left Singular Vectors
+| $V$ Right Singular Vectors
+| $X$ Eigenvector Matrix
+| $\Lambda$ Eigenvalue Matrix
+| $\Sigma$ Singular Value Matrix
+
 
 Matrices
 ========
@@ -77,6 +106,29 @@ with $\begin{bmatrix} -1\\ 2 \end{bmatrix}$ with the right amount to find
 $\begin{bmatrix} 0\\ 3 \end{bmatrix}$, in other words it's a **Linear Combination** of the columns.
 
 
+
+Matrix Multiplication
+=====================
+Matrix vector multiplication can be seen in two ways, either as a inner products of the rows or 
+combination of the columns.
+
+.. math:: 
+  \bf{By rows} \space
+  \begin{bmatrix}
+  2   &   2\\
+  2   &   2\\
+  2   &   2\\
+  \end{bmatrix}
+  \begin{bmatrix}
+  x_1\\
+  x_2\\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  2x_1 + 2x_2\\
+  2x_1 + 2x_2\\
+  2x_1 + 2x_2\\
+  \end{bmatrix}
 
 
 

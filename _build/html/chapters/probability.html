@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Probability &#8212; Draftbook  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}"}}})</script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Linear Algebra" href="linalg.html" />
     <link rel="prev" title="General Advice for Linear-Regression Priors" href="1.html" />
 
@@ -41,7 +41,7 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../index.html">
   
   
   <h1 class="site-logo" id="site-title">Draftbook  documentation</h1>
@@ -49,7 +49,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
@@ -74,6 +74,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="linalg.html">
    Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="statistics.html">
+   Statistcal Modeling
   </a>
  </li>
 </ul>
@@ -118,7 +123,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/probability.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapters/probability.rst.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -156,6 +161,59 @@
                 
   <div class="section" id="probability">
 <h1>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
+<p>Probability Cheatsheet</p>
+<table class="table">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Notation symbol</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Omega\)</span></p></td>
+<td><p>Sample space</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td><p>Atom</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(\omega)\)</span></p></td>
+<td><p>Probability measure</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<td><p>Random variable</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p>Realization of random variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p(X, Y, Z)\)</span></p></td>
+<td><p>Joint distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(X|Y)=\frac{p(X,Y)}{p(Y)}\)</span></p></td>
+<td><p>Conditional Probability</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p(X)=\sum_{y}p(X,Y=y)\)</span></p></td>
+<td><p>Marginalization</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(Y|X) \propto p(X|Y)p(Y)\)</span></p></td>
+<td><p>Bayes rule</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(X \perp Y \iff p(X,Y)=p(X)p(Y)\)</span></p></td>
+<td><p>Independence</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(X \perp Y|Z \iff p(X,Y,Z)= p(X|Z)p(Y|Z)\)</span></p></td>
+<td><p>Conditional independence</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\bb{E}\right[f(X)\left]=\sim_x f(x)p(x)\)</span></p></td>
+<td><p>Expectation</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\bb{E}\right[f(X)|Y=y\left]=\sim_x f(x)p(x|y)\)</span></p></td>
+<td><p>Conditional expectation</p></td>
+</tr>
+</tbody>
+</table>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
 
@@ -177,9 +235,9 @@
 <span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href="./pyplots/ellipses.py">Source code</a>, <a class="reference external" href="./pyplots/ellipses.png">png</a>, <a class="reference external" href="./pyplots/ellipses.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/ellipses.pdf">pdf</a>)</p>
+<p>(<a class="reference external" href="../pyplots/ellipses.py">Source code</a>, <a class="reference external" href="../pyplots/ellipses.png">png</a>, <a class="reference external" href="../pyplots/ellipses.hires.png">hires.png</a>, <a class="reference external" href="../pyplots/ellipses.pdf">pdf</a>)</p>
 <div class="figure align-default">
-<img alt="_images/ellipses.png" src="_images/ellipses.png" />
+<img alt="../_images/ellipses.png" src="../_images/ellipses.png" />
 </div>
 </div>
 
@@ -212,7 +270,7 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../_static/js/index.js"></script>
     
   </body>
 </html>

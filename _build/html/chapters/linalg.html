@@ -8,21 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linear Algebra &#8212; Draftbook  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}"}}})</script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistcal Modeling" href="statistics.html" />
     <link rel="prev" title="Probability" href="probability.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +41,7 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../index.html">
   
   
   <h1 class="site-logo" id="site-title">Draftbook  documentation</h1>
@@ -48,7 +49,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
@@ -73,6 +74,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="statistics.html">
+   Statistcal Modeling
   </a>
  </li>
 </ul>
@@ -117,7 +123,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/linalg.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapters/linalg.rst.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -146,55 +152,55 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrices">
-   Matrices
+  <a class="reference internal nav-link" href="#the-matrix-alphabet">
+   The Matrix Alphabet
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-geometry-of-linear-equations">
-     The Geometry of Linear Equations
+    <a class="reference internal nav-link" href="#matrices">
+     Matrices
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matrix-form">
-       Matrix Form
+      <a class="reference internal nav-link" href="#the-geometry-of-linear-equations">
+       The Geometry of Linear Equations
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#row-picture">
-         Row Picture
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#column-picture">
-         Column Picture
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elimination">
-   Elimination
+  <a class="reference internal nav-link" href="#matrix-form">
+   Matrix Form
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eigen-vectors-and-eigen-values">
-   Eigen-vectors and Eigen-values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#singular-value-decomposition-svd">
-   Singular Value Decomposition (SVD)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solvability-conditions-for-linear-systems">
-   Solvability Conditions for Linear Systems
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matrix-multiplication">
+     Matrix Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elimination">
+     Elimination
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eigen-vectors-and-eigen-values">
+     Eigen-vectors and Eigen-values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#singular-value-decomposition-svd">
+     Singular Value Decomposition (SVD)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solvability-conditions-for-linear-systems">
+     Solvability Conditions for Linear Systems
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -208,8 +214,37 @@
                 
   <div class="section" id="linear-algebra">
 <h1>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-matrix-alphabet">
+<h2>The Matrix Alphabet<a class="headerlink" href="#the-matrix-alphabet" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(A\)</span> Any Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(C\)</span> Circulant Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(C\)</span> Column Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(D\)</span> Diagonal Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(F\)</span> Fourier Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(I\)</span> Identity Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(L\)</span> Lower Triangular Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(L\)</span> Laplacian Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(M\)</span> Markov Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(M\)</span> Mixing Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Projection Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Probability Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Perumutation Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q\)</span> Orthogonal Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(R\)</span> Upper Triangular Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(R\)</span> Row Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(S\)</span> Symetric Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(S\)</span> Sample Covariance Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(T\)</span> Tensor</div>
+<div class="line"><span class="math notranslate nohighlight">\(U\)</span> Upper Triangular Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(U\)</span> Left Singular Vectors</div>
+<div class="line"><span class="math notranslate nohighlight">\(V\)</span> Right Singular Vectors</div>
+<div class="line"><span class="math notranslate nohighlight">\(X\)</span> Eigenvector Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Lambda\)</span> Eigenvalue Matrix</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Sigma\)</span> Singular Value Matrix</div>
+</div>
 <div class="section" id="matrices">
-<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h2>
+<h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h3>
 <p>A matrix is a linear function that maps vectors to vectors <span class="math notranslate nohighlight">\(A\b{x}=\b{y}\)</span>.
 Here <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(m\times n, \b{x} \in \bb{R}^n \text{and } y \in \bb{R}^m\)</span>.
 A matrix apply a linear transformating that rotate and strech a vector.</p>
@@ -226,9 +261,12 @@ f(\textbf{x}) &amp;= f(x_1 \textbf{e}_1 + x_2 \textbf{e}_2 + \dots + x_n \textbf
 &amp;= \left[\begin{array}{c|c|c|c} f(\textbf{e}_1) &amp; f(\textbf{e}_2) &amp; \dots &amp; f(\textbf{e}_n) \end{array}\right] \textbf{x}
 \end{align}\end{split}\]</div>
 <div class="section" id="the-geometry-of-linear-equations">
-<h3>The Geometry of Linear Equations<a class="headerlink" href="#the-geometry-of-linear-equations" title="Permalink to this headline">¶</a></h3>
+<h4>The Geometry of Linear Equations<a class="headerlink" href="#the-geometry-of-linear-equations" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
 <div class="section" id="matrix-form">
-<h4>Matrix Form<a class="headerlink" href="#matrix-form" title="Permalink to this headline">¶</a></h4>
+<h2>Matrix Form<a class="headerlink" href="#matrix-form" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{alignat*}{4}
 &amp;2x-y&amp;&amp;=0\\
@@ -252,15 +290,10 @@ f(\textbf{x}) &amp;= f(x_1 \textbf{e}_1 + x_2 \textbf{e}_2 + \dots + x_n \textbf
 <p class="admonition-title">Warning</p>
 <p>Fix alignment of equations</p>
 </div>
-<div class="section" id="row-picture">
-<h5>Row Picture<a class="headerlink" href="#row-picture" title="Permalink to this headline">¶</a></h5>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Add Row picture plot</p>
 </div>
-</div>
-<div class="section" id="column-picture">
-<h5>Column Picture<a class="headerlink" href="#column-picture" title="Permalink to this headline">¶</a></h5>
 <div class="math notranslate nohighlight">
 \[\begin{split}x \begin{bmatrix} 2 \\ -1 \end{bmatrix} +
 y \begin{bmatrix} -1 \\ 2 \end{bmatrix} =
@@ -278,12 +311,30 @@ whole plane.</p>
 <p>Basically the interpretation of this is to combine the vector <span class="math notranslate nohighlight">\(\begin{bmatrix} 2\\ -1 \end{bmatrix}\)</span>
 with <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bmatrix}\)</span> with the right amount to find
 <span class="math notranslate nohighlight">\(\begin{bmatrix} 0\\ 3 \end{bmatrix}\)</span>, in other words it’s a <strong>Linear Combination</strong> of the columns.</p>
-</div>
-</div>
-</div>
+<div class="section" id="matrix-multiplication">
+<h3>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
+<p>Matrix vector multiplication can be seen in two ways, either as a inner products of the rows or
+combination of the columns.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\bf{By rows} \space
+\begin{bmatrix}
+2   &amp;   2\\
+2   &amp;   2\\
+2   &amp;   2\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+2x_1 + 2x_2\\
+2x_1 + 2x_2\\
+2x_1 + 2x_2\\
+\end{bmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="elimination">
-<h2>Elimination<a class="headerlink" href="#elimination" title="Permalink to this headline">¶</a></h2>
+<h3>Elimination<a class="headerlink" href="#elimination" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
   1   &amp;   2   &amp;   1\\
@@ -304,7 +355,7 @@ with <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bm
 \end{bmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="eigen-vectors-and-eigen-values">
-<h2>Eigen-vectors and Eigen-values<a class="headerlink" href="#eigen-vectors-and-eigen-values" title="Permalink to this headline">¶</a></h2>
+<h3>Eigen-vectors and Eigen-values<a class="headerlink" href="#eigen-vectors-and-eigen-values" title="Permalink to this headline">¶</a></h3>
 <p>A square matrix has a special vector for wich it acts as a number: <span class="math notranslate nohighlight">\(A\b{s}=\lambda \b{s}\)</span>.
 These vectors and numbers are called eigen-vectors and eigen-values, and they are an important
 property of the matrix.
@@ -421,14 +472,14 @@ a component of <span class="math notranslate nohighlight">\(b\)</span>, now is t
 </ol>
 </div>
 <div class="section" id="singular-value-decomposition-svd">
-<h2>Singular Value Decomposition (SVD)<a class="headerlink" href="#singular-value-decomposition-svd" title="Permalink to this headline">¶</a></h2>
+<h3>Singular Value Decomposition (SVD)<a class="headerlink" href="#singular-value-decomposition-svd" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}A &amp;=U \Sigma V^T\\
 &amp;= \sigma_1 u_1 v_1^T + \sigma_2 u_2 v_2^T + \cdot + \sigma_n u_n v_n^T\\\end{split}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(U \in \bb{R}^{m \times m}, V \in \bb{R}^{n\times n}, \Sigma \in \bb{R}^{m \times n}\)</span>, <span class="math notranslate nohighlight">\(n \)</span> is the rank, and <span class="math notranslate nohighlight">\(\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_n\)</span>.</p>
 </div>
 <div class="section" id="solvability-conditions-for-linear-systems">
-<h2>Solvability Conditions for Linear Systems<a class="headerlink" href="#solvability-conditions-for-linear-systems" title="Permalink to this headline">¶</a></h2>
+<h3>Solvability Conditions for Linear Systems<a class="headerlink" href="#solvability-conditions-for-linear-systems" title="Permalink to this headline">¶</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be <span class="math notranslate nohighlight">\(n \times n\)</span> and consider <span class="math notranslate nohighlight">\(Ax=b\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is not singular, the this
 system has a unique solution <span class="math notranslate nohighlight">\(x=A^{-1}b\)</span>. Then the question does a singular matrix have
 a solution? The answer is it depends on the relationship between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.
@@ -476,6 +527,7 @@ of <span class="math notranslate nohighlight">\(b\)</span>. There is no solution
 </ol>
 </div>
 </div>
+</div>
 
 
               </div>
@@ -487,6 +539,7 @@ of <span class="math notranslate nohighlight">\(b\)</span>. There is no solution
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="probability.html" title="previous page">Probability</a>
+    <a class='right-next' id="next-link" href="statistics.html" title="next page">Statistcal Modeling</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -505,7 +558,7 @@ of <span class="math notranslate nohighlight">\(b\)</span>. There is no solution
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../_static/js/index.js"></script>
     
   </body>
 </html>

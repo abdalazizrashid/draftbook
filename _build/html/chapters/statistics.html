@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistcal Modeling &#8212; Draftbook  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Linear Algebra" href="linalg.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Draftbook  documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.html">
+   General Advice for Linear-Regression Priors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="probability.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linalg.html">
+   Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Statistcal Modeling
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/statistics.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-objective-of-statistcal-modeling">
+   The objective of statistcal modeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistcal-modeling-process">
+   Statistcal modeling process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bayesian-model">
+   Bayesian Model
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="statistcal-modeling">
+<h1>Statistcal Modeling<a class="headerlink" href="#statistcal-modeling" title="Permalink to this headline">¶</a></h1>
+<p>Statistcal modeling is a mathematical structure to imitates and approximate the generative process.</p>
+<div class="section" id="the-objective-of-statistcal-modeling">
+<h2>The objective of statistcal modeling<a class="headerlink" href="#the-objective-of-statistcal-modeling" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Quantify uncertainty</p></li>
+<li><p>Inference</p></li>
+<li><p>Measure support for hypotheses</p></li>
+<li><p>Predication</p></li>
+</ul>
+</div></blockquote>
+<p>Building a statistcal model is a process and each step should be taken carefully.</p>
+</div>
+<div class="section" id="statistcal-modeling-process">
+<h2>Statistcal modeling process<a class="headerlink" href="#statistcal-modeling-process" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Understand the problem</p></li>
+<li><p>Plan and collect the data</p></li>
+<li><p>Explore and visualize the data</p></li>
+<li><dl class="simple">
+<dt>Postulate the model</dt><dd><p>The model should be a balance between complexity and generalizability, this
+often known as <strong>Bias Variance Tradeoff</strong>.</p>
+</dd>
+</dl>
+</li>
+<li><p>Fit the model</p></li>
+<li><p>Check the model</p></li>
+<li><p>Goto step 4 and repeat</p></li>
+<li><p>Use the model</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="bayesian-model">
+<h2>Bayesian Model<a class="headerlink" href="#bayesian-model" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say we have a dataset of men height collected by a survey, clearly it’s almost impassible
+to collect the genetic information that explain the variability in these men heights. We only
+have the men height available to us, to account for variablilty we might assume that the men
+height follow a normal distribution.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y_i = \mu + \epsilon_i\\
+\epsilon_i \overset{iid}{\sim} \mathcal{N}(0, \sigma^2)\\\end{split}\]</div>
+<p>Or it can be written as:</p>
+<div class="math notranslate nohighlight">
+\[y_i \overset{iid}{\sim} \mathcal{N}(\mu, \sigma^2)\]</div>
+<p>The main components in Bayesian method:
+Robert the Doll
+1. Likelihood <span class="math notranslate nohighlight">\(p(y|\theta)\)</span>
+2. Prior <span class="math notranslate nohighlight">\(p(\theta)\)</span>
+3. Posterior:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+p(\theta | y) &amp;= \frac{p(\theta, y)}{p(y)}\\
+&amp;= \frac{p(\theta, y)}{\int p(\theta, y)d \theta}\\
+&amp;= \frac{p(y| \theta) p(\theta)}{\int p(y|\theta)p(\theta)d\theta}
+\end{align}\end{split}\]</div>
+<p>Now our model is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+   y_i | \mu, \sigma^2  &amp;\overset{iid}{\sim} \mathcal{\mu, \sigma^2}  \\
+   p(\mu, \sigma^2) &amp;= p(\mu)p(\sigma^2) \\
+   \mu &amp;\sim \mathcal{N}(\mu_o, \sigma^2_o)  \\
+   \sigma^2 &amp;\sim InverseGamma(\nu_o, \beta_o)  \\
+\end{align}\end{split}\]</div>
+<p>We can assume independance in the prior and still get dependance in the posterior
+The conjugate prior of <span class="math notranslate nohighlight">\(\mu\)</span> if we know the value of <span class="math notranslate nohighlight">\(\sigma^2\)</span> is a normal distribution,
+and the conjugate prior for <span class="math notranslate nohighlight">\(\sigma^2\)</span> when the <span class="math notranslate nohighlight">\(\mu\)</span> is know is the <span class="math notranslate nohighlight">\(InverseGamma\)</span> distribution.</p>
+<div class="graphviz"><object data="../_images/graphviz-fdd686ad143b4ef494cc7869657523754ed5605d.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph foo {
+   &quot;bar&quot; -&gt; &quot;&amp;mu&quot;;
+}</p></object></div>
+<div class="figure">
+<p><img src="../_images/tikz-890e2cd1f26b74956aedcfa147c4df40683781da.png" alt="[every node/.style={font=\ttfamily\scriptsize,text height=1.5ex,text depth=.8ex},
+ var/.style={draw,circle,inner sep=0},
+ reentrancy/.style={draw=none,fill=none,text height=1ex,text depth=0},
+ proc/.style={-latex,every node/.style={font=\ttfamily\tiny}},
+ top/.style={label={[font=\ttfamily\tiny,anchor=base,yshift=.5ex]above:top}}]
+\node[draw=none] (X) {};
+\node[below=0ex of X] (P) {PENMAN};
+\node[right=8em of P] (T) {Tree};
+\node[right=8em of T] (G) {Graph};
+(P) -- (T) -- (G);
+
+\node [below=5ex of P,xshift=1em,draw=none,text badly ragged,
+       label={[align=left]below:(a / alpha\\~~~:ARG0 (b / beta)\\~~~:ARG0-of (g / gamma\\~~~~~~:ARG1 b))}]
+      (Pa) {};
+
+\coordinate[top,below=5ex of T] (TTop);
+\node[var,below=2ex of TTop] (Ta) {a};
+\node[var,below=4ex of Ta,xshift=-1.5em] (Tb) {b};
+\node[var,below=4ex of Ta,xshift=1.5em] (Tg) {g};
+\node[reentrancy,below=4ex of Tg] (Tb2) {b};
+\draw[-latex] (TTop) -- (Ta);
+\draw[-latex] (Ta) -- (Tb) node [midway,left] {:ARG0};
+\draw[-latex] (Ta) -- (Tg) node [midway,right] {:ARG0-of};
+\draw[-latex] (Tg) -- (Tb2) node [midway,right] {:ARG1};
+
+\coordinate[top,below=5ex of G] (GTop);
+\node[var,below=2ex of GTop] (Ga) {a};
+\node[var,below=3ex of Ga,xshift=-3em] (Gb) {b};
+\node[var,below=6ex of Ga] (Gg) {g};
+\draw[-latex] (GTop) -- (Ga);
+\draw[-latex] (Ga) -- (Gb) node [near start,left] {:ARG0};
+\draw[-latex] (Gg) -- (Ga) node [midway,right] {:ARG0};
+\draw[-latex] (Gg) -- (Gb) node [near start,below left] {:ARG1};" /></p>
+</div><div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">\tikz \graph [layered layout] {
+Hello -&gt; World -&gt; &quot;$c^2$&quot;;
+World -&gt; &quot;$\delta$&quot; -&gt; Hello;
+};</span>)</p>
+<p>! Package pgfkeys Error: I do not know the key '/tikz/graphs/layered layout' an
+d I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...                                              
+                                                  
+l.11 \\tikz \\graph [layered layout]
+                                 {
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./tikz-e1d700d2792743bcfc87679451e7041ab6e8a765.aux))
+(see the transcript file for additional information)
+ 486 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 51 glue_spec
+, 7 attribute_list, 2 write nodes
+   avail lists: 1:10,2:545,3:181,4:13,5:26,6:1,7:549,8:2,9:102
+&lt;/usr/share/fonts/OTF/lmroman12-regular.otf&gt;&lt;/usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb&gt;&lt;/usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb&gt;
+Output written on tikz-e1d700d2792743bcfc87679451e7041ab6e8a765.pdf (1 page, 18
+252 bytes).
+Transcript written on tikz-e1d700d2792743bcfc87679451e7041ab6e8a765.log.
+&quot;</p>
+</div>
+</div></div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="linalg.html" title="previous page">Linear Algebra</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Abdalaziz Rashid<br/>
+        
+            &copy; Copyright 2020, Abdalaziz Rashid.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
