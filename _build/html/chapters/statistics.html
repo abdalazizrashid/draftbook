@@ -244,10 +244,24 @@ p(\theta | y) &amp;= \frac{p(\theta, y)}{p(y)}\\
 <p>We can assume independance in the prior and still get dependance in the posterior
 The conjugate prior of <span class="math notranslate nohighlight">\(\mu\)</span> if we know the value of <span class="math notranslate nohighlight">\(\sigma^2\)</span> is a normal distribution,
 and the conjugate prior for <span class="math notranslate nohighlight">\(\sigma^2\)</span> when the <span class="math notranslate nohighlight">\(\mu\)</span> is know is the <span class="math notranslate nohighlight">\(InverseGamma\)</span> distribution.</p>
-<div class="graphviz"><object data="../_images/graphviz-fdd686ad143b4ef494cc7869657523754ed5605d.svg" type="image/svg+xml" class="graphviz">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This graph is just a placeholder</p>
+</div>
+<div class="graphviz"><object data="../_images/graphviz-8760a67c303419163234b3578419e6a0de3178fd.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph foo {
-   &quot;bar&quot; -&gt; &quot;&amp;mu&quot;;
+   node [shape = doublecircle]; y1 y2 yn;
+         node [shape = circle];
+   &quot;mu&quot; -&gt; &quot;y1&quot;;
+   &quot;mu&quot; -&gt; &quot;y2&quot;;
+   &quot;mu&quot; -&gt; &quot;yn&quot;;
+   &quot;sigma^2&quot; -&gt; &quot;y1&quot;;
+   &quot;sigma^2&quot; -&gt; &quot;y2&quot;;
+   &quot;sigma^2&quot; -&gt; &quot;yn&quot;;
+   &quot;y2&quot; -&gt; &quot;yn&quot;;
+
 }</p></object></div>
+<a class="reference internal image-reference" href="chapters/../images/model_1.png"><img alt="Graphical represenation showing the observed random variable and the parameters." src="chapters/../images/model_1.png" style="width: 400px;" /></a>
 <div class="figure">
 <p><img src="../_images/tikz-890e2cd1f26b74956aedcfa147c4df40683781da.png" alt="[every node/.style={font=\ttfamily\scriptsize,text height=1.5ex,text depth=.8ex},
  var/.style={draw,circle,inner sep=0},

@@ -46,6 +46,7 @@ extensions = [
     'sphinx_math_dollar',
     'sphinx.ext.graphviz',
     'sphinxcontrib.tikz',
+    'sphinxcontrib.programoutput'
     ]
 
 

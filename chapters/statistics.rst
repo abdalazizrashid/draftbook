@@ -77,11 +77,27 @@ The conjugate prior of $\mu$ if we know the value of $\sigma^2$ is a normal dist
 and the conjugate prior for $\sigma^2$ when the $\mu$ is know is the $InverseGamma$ distribution.
 
 
+.. warning:: This graph is just a placeholder
+
+
 .. graphviz::
 
      digraph foo {
-      "bar" -> "&mu";
+      node [shape = doublecircle]; y1 y2 yn;
+	    node [shape = circle];
+      "mu" -> "y1";
+      "mu" -> "y2";
+      "mu" -> "yn";
+      "sigma^2" -> "y1";
+      "sigma^2" -> "y2";
+      "sigma^2" -> "yn";
+      "y2" -> "yn";
+
    }
+
+.. image:: ../images/model_1.png
+  :width: 400
+  :alt: Graphical represenation showing the observed random variable and the parameters.
 
 
 .. tikz::
