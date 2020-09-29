@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : my-notes  # The title of the book. Will be placed in the left navbar.
+title                       : My Notes  # The title of the book. Will be placed in the left navbar.
 author                      : Abdalaziz Rashid  # The author of the book
 copyright                   : "2020"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
@@ -19,7 +19,6 @@ sphinx:
     - sphinxcontrib.tikz
   config:
     myst_amsmath_enable: true
-    myst_override_mathjax: false
     mathjax_config:
       TeX:
         Macros:
