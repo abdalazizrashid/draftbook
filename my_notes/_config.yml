@@ -10,7 +10,9 @@ author                      : Abdalaziz Rashid  # The author of the book
 copyright                   : "2020"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 
-parse                       : myst_extended_syntax: true
+parse:
+  myst_extended_syntax: true
+
 sphinx:
   extra_extensions:
     - sphinx.ext.graphviz
