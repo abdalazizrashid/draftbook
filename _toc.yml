@@ -1,0 +1,15 @@
+file: CONDUCT
+sections:
+- file: CONTRIBUTING
+- file: README
+- file: my_notes/content
+  sections:
+  - file: my_notes/intro
+  - file: my_notes/markdown
+  - file: my_notes/notebooks
+  - file: chapters/1.rst
+  - file: chapters/linalg.rst
+  - file: chapters/mcmc.rst
+  - file: chapters/probability.rst
+  - file: chapters/statistics.rst
+

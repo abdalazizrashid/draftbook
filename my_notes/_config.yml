@@ -1,0 +1,29 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# See the documentation for help and more options: 
+# https://jupyterbook.org/customize/config.html
+
+#######################################################################################
+# Book settings
+title                       : my-notes  # The title of the book. Will be placed in the left navbar.
+author                      : Abdalaziz Rashid  # The author of the book
+copyright                   : "2020"  # Copyright year to be placed in the footer
+logo                        : logo.png  # A path to the book logo
+
+parse                       : myst_extended_syntax: true
+sphinx:
+  extra_extensions:
+    - sphinx.ext.graphviz
+    - sphinxcontrib.tikz
+  config:
+    myst_amsmath_enable: true
+    myst_override_mathjax: false
+    mathjax_config:
+      TeX:
+        Macros:
+          'b': ["{\mathbf #1}",1]
+          'bb': ['{\mathbb{#1}}', 1]
+          'vertbar': "\rule[-1ex]{0.5pt}{2.5ex}"
+          'horzbar': "\rule[.5ex]{2.5ex}{0.5pt}"
+          'distas': ['{\overset{#1}{\sim}', 1] 
+

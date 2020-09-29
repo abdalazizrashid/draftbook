@@ -6,25 +6,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Probability &#8212; Draftbook  documentation</title>
+    <title>Probability &#8212; My Jupyter Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear Algebra" href="linalg.html" />
-    <link rel="prev" title="General Advice for Linear-Regression Priors" href="1.html" />
+    <link rel="next" title="Statistcal Modeling" href="statistics.html" />
+    <link rel="prev" title="Test" href="mcmc.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -44,42 +59,81 @@
 <a class="navbar-brand text-wrap" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">Draftbook  documentation</h1>
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
   
 </a>
 </div>
 
 <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <p class="caption">
- <span class="caption-text">
-  Contents:
- </span>
-</p>
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="1.html">
-   General Advice for Linear-Regression Priors
+  <a class="reference internal" href="../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   my-notes
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Probability
+  <a class="reference internal" href="../my_notes/content.html">
+   Content in Jupyter Book
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linalg.html">
-   Linear Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="statistics.html">
-   Statistcal Modeling
-  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/intro.html">
+     Welcome to your Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.html">
+     General Advice for Linear-Regression Priors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linalg.html">
+     Linear Algebra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcmc.html">
+     Test
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Probability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="statistics.html">
+     Statistcal Modeling
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -88,7 +142,7 @@
  <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -123,7 +177,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/probability.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapters/probability.rst"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -173,74 +227,68 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Omega\)</span></p></td>
+<tr class="row-even"><td><p>$Omega$</p></td>
 <td><p>Sample space</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<tr class="row-odd"><td><p>$omega$</p></td>
 <td><p>Atom</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(\omega)\)</span></p></td>
+<tr class="row-even"><td><p>$p(omega)$</p></td>
 <td><p>Probability measure</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(X\)</span></p></td>
+<tr class="row-odd"><td><p>$X$</p></td>
 <td><p>Random variable</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<tr class="row-even"><td><p>$x$</p></td>
 <td><p>Realization of random variable</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p(X, Y, Z)\)</span></p></td>
+<tr class="row-odd"><td><p>$p(X, Y, Z)$</p></td>
 <td><p>Joint distribution</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(X|Y)=\frac{p(X,Y)}{p(Y)}\)</span></p></td>
+<tr class="row-even"><td><p>$p(X|Y)=frac{p(X,Y)}{p(Y)}$</p></td>
 <td><p>Conditional Probability</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p(X)=\sum_{y}p(X,Y=y)\)</span></p></td>
+<tr class="row-odd"><td><p>$p(X)=sum_{y}p(X,Y=y)$</p></td>
 <td><p>Marginalization</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p(Y|X) \propto p(X|Y)p(Y)\)</span></p></td>
+<tr class="row-even"><td><p>$p(Y|X) propto p(X|Y)p(Y)$</p></td>
 <td><p>Bayes rule</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(X \perp Y \iff p(X,Y)=p(X)p(Y)\)</span></p></td>
+<tr class="row-odd"><td><p>$X perp Y iff p(X,Y)=p(X)p(Y)$</p></td>
 <td><p>Independence</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(X \perp Y|Z \iff p(X,Y,Z)= p(X|Z)p(Y|Z)\)</span></p></td>
+<tr class="row-even"><td><p>$X perp Y|Z iff p(X,Y,Z)= p(X|Z)p(Y|Z)$</p></td>
 <td><p>Conditional independence</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\bb{E}\right[f(X)\left]=\sim_x f(x)p(x)\)</span></p></td>
+<tr class="row-odd"><td><p>$bb{E}right[f(X)left]=sim_x f(x)p(x)$</p></td>
 <td><p>Expectation</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\bb{E}\right[f(X)|Y=y\left]=\sim_x f(x)p(x|y)\)</span></p></td>
+<tr class="row-even"><td><p>$bb{E}right[f(X)|Y=yleft]=sim_x f(x)p(x|y)$</p></td>
 <td><p>Conditional expectation</p></td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
-
-<span class="n">delta</span> <span class="o">=</span> <span class="mf">45.0</span> <span class="c1"># degrees</span>
-
-<span class="n">angles</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="o">+</span><span class="n">delta</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
-<span class="n">ells</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ellipse</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">angles</span><span class="p">]</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ells</span><span class="p">:</span>
-    <span class="n">e</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
-    <span class="n">e</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-    <span class="n">a</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-
-<span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-<span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>(<a class="reference external" href="../pyplots/ellipses.py">Source code</a>, <a class="reference external" href="../pyplots/ellipses.png">png</a>, <a class="reference external" href="../pyplots/ellipses.hires.png">hires.png</a>, <a class="reference external" href="../pyplots/ellipses.pdf">pdf</a>)</p>
-<div class="figure align-default">
-<img alt="../_images/ellipses.png" src="../_images/ellipses.png" />
-</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -250,17 +298,17 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="1.html" title="previous page">General Advice for Linear-Regression Priors</a>
-    <a class='right-next' id="next-link" href="linalg.html" title="next page">Linear Algebra</a>
+    <a class='left-prev' id="prev-link" href="mcmc.html" title="previous page">Test</a>
+    <a class='right-next' id="next-link" href="statistics.html" title="next page">Statistcal Modeling</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Abdalaziz Rashid<br/>
+          By The Jupyter Book community<br/>
         
-            &copy; Copyright 2020, Abdalaziz Rashid.<br/>
+            &copy; Copyright 2020.<br/>
       </p>
     </div>
   </footer>

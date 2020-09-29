@@ -6,25 +6,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linear Algebra &#8212; Draftbook  documentation</title>
+    <title>Linear Algebra &#8212; My Jupyter Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}, "TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Statistcal Modeling" href="statistics.html" />
-    <link rel="prev" title="Probability" href="probability.html" />
+    <link rel="next" title="Test" href="mcmc.html" />
+    <link rel="prev" title="General Advice for Linear-Regression Priors" href="1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -44,42 +59,81 @@
 <a class="navbar-brand text-wrap" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">Draftbook  documentation</h1>
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
   
 </a>
 </div>
 
 <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <p class="caption">
- <span class="caption-text">
-  Contents:
- </span>
-</p>
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="1.html">
-   General Advice for Linear-Regression Priors
+  <a class="reference internal" href="../CONTRIBUTING.html">
+   Contributing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="probability.html">
-   Probability
+  <a class="reference internal" href="../README.html">
+   my-notes
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Linear Algebra
+  <a class="reference internal" href="../my_notes/content.html">
+   Content in Jupyter Book
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="statistics.html">
-   Statistcal Modeling
-  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/intro.html">
+     Welcome to your Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../my_notes/notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.html">
+     General Advice for Linear-Regression Priors
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Linear Algebra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcmc.html">
+     Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="probability.html">
+     Probability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="statistics.html">
+     Statistcal Modeling
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -88,7 +142,7 @@
  <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -123,7 +177,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/linalg.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapters/linalg.rst"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -217,36 +271,36 @@
 <div class="section" id="the-matrix-alphabet">
 <h2>The Matrix Alphabet<a class="headerlink" href="#the-matrix-alphabet" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
-<div class="line"><span class="math notranslate nohighlight">\(A\)</span> Any Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(C\)</span> Circulant Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(C\)</span> Column Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(D\)</span> Diagonal Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(F\)</span> Fourier Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(I\)</span> Identity Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(L\)</span> Lower Triangular Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(L\)</span> Laplacian Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(M\)</span> Markov Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(M\)</span> Mixing Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Projection Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Probability Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(P\)</span> Perumutation Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(Q\)</span> Orthogonal Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(R\)</span> Upper Triangular Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(R\)</span> Row Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(S\)</span> Symetric Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(S\)</span> Sample Covariance Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(T\)</span> Tensor</div>
-<div class="line"><span class="math notranslate nohighlight">\(U\)</span> Upper Triangular Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(U\)</span> Left Singular Vectors</div>
-<div class="line"><span class="math notranslate nohighlight">\(V\)</span> Right Singular Vectors</div>
-<div class="line"><span class="math notranslate nohighlight">\(X\)</span> Eigenvector Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(\Lambda\)</span> Eigenvalue Matrix</div>
-<div class="line"><span class="math notranslate nohighlight">\(\Sigma\)</span> Singular Value Matrix</div>
+<div class="line">$A$ Any Matrix</div>
+<div class="line">$C$ Circulant Matrix</div>
+<div class="line">$C$ Column Matrix</div>
+<div class="line">$D$ Diagonal Matrix</div>
+<div class="line">$F$ Fourier Matrix</div>
+<div class="line">$I$ Identity Matrix</div>
+<div class="line">$L$ Lower Triangular Matrix</div>
+<div class="line">$L$ Laplacian Matrix</div>
+<div class="line">$M$ Markov Matrix</div>
+<div class="line">$M$ Mixing Matrix</div>
+<div class="line">$P$ Projection Matrix</div>
+<div class="line">$P$ Probability Matrix</div>
+<div class="line">$P$ Perumutation Matrix</div>
+<div class="line">$Q$ Orthogonal Matrix</div>
+<div class="line">$R$ Upper Triangular Matrix</div>
+<div class="line">$R$ Row Matrix</div>
+<div class="line">$S$ Symetric Matrix</div>
+<div class="line">$S$ Sample Covariance Matrix</div>
+<div class="line">$T$ Tensor</div>
+<div class="line">$U$ Upper Triangular Matrix</div>
+<div class="line">$U$ Left Singular Vectors</div>
+<div class="line">$V$ Right Singular Vectors</div>
+<div class="line">$X$ Eigenvector Matrix</div>
+<div class="line">$Lambda$ Eigenvalue Matrix</div>
+<div class="line">$Sigma$ Singular Value Matrix</div>
 </div>
 <div class="section" id="matrices">
 <h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h3>
-<p>A matrix is a linear function that maps vectors to vectors <span class="math notranslate nohighlight">\(A\b{x}=\b{y}\)</span>.
-Here <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(m\times n, \b{x} \in \bb{R}^n \text{and } y \in \bb{R}^m\)</span>.
+<p>A matrix is a linear function that maps vectors to vectors $Ab{x}=b{y}$.
+Here $A$ is $mtimes n, b{x} in bb{R}^n text{and } y in bb{R}^m$.
 A matrix apply a linear transformating that rotate and strech a vector.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -298,19 +352,19 @@ f(\textbf{x}) &amp;= f(x_1 \textbf{e}_1 + x_2 \textbf{e}_2 + \dots + x_n \textbf
 \[\begin{split}x \begin{bmatrix} 2 \\ -1 \end{bmatrix} +
 y \begin{bmatrix} -1 \\ 2 \end{bmatrix} =
 \begin{bmatrix} 0 \\ 3 \end{bmatrix}\end{split}\]</div>
-<p>So we need to take the right combination to produce <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 \\ 2 \end{bmatrix}\)</span>
-Let’s take <span class="math notranslate nohighlight">\(x=1, y=2\)</span>. Thus the idea of linear combination is crucial.
-If we took all the possible linear combination of <span class="math notranslate nohighlight">\(x\)</span>’s and <span class="math notranslate nohighlight">\(y\)</span>’s. What will be the results?
+<p>So we need to take the right combination to produce $begin{bmatrix} 0 \ 2 end{bmatrix}$
+Let’s take $x=1, y=2$. Thus the idea of linear combination is crucial.
+If we took all the possible linear combination of $x$’s and $y$’s. What will be the results?
 The results would be that we could get any RHS at all, the combination of x
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 2\\ -1 \end{bmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bmatrix}\)</span> would fill the
+$begin{bmatrix} 2\ -1 end{bmatrix}$, $begin{bmatrix} -1\ 2 end{bmatrix}$ would fill the
 whole plane.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Add column picture plot</p>
 </div>
-<p>Basically the interpretation of this is to combine the vector <span class="math notranslate nohighlight">\(\begin{bmatrix} 2\\ -1 \end{bmatrix}\)</span>
-with <span class="math notranslate nohighlight">\(\begin{bmatrix} -1\\ 2 \end{bmatrix}\)</span> with the right amount to find
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 0\\ 3 \end{bmatrix}\)</span>, in other words it’s a <strong>Linear Combination</strong> of the columns.</p>
+<p>Basically the interpretation of this is to combine the vector $begin{bmatrix} 2\ -1 end{bmatrix}$
+with $begin{bmatrix} -1\ 2 end{bmatrix}$ with the right amount to find
+$begin{bmatrix} 0\ 3 end{bmatrix}$, in other words it’s a <strong>Linear Combination</strong> of the columns.</p>
 <div class="section" id="matrix-multiplication">
 <h3>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>Matrix vector multiplication can be seen in two ways, either as a inner products of the rows or
@@ -356,16 +410,16 @@ x_2\\
 </div>
 <div class="section" id="eigen-vectors-and-eigen-values">
 <h3>Eigen-vectors and Eigen-values<a class="headerlink" href="#eigen-vectors-and-eigen-values" title="Permalink to this headline">¶</a></h3>
-<p>A square matrix has a special vector for wich it acts as a number: <span class="math notranslate nohighlight">\(A\b{s}=\lambda \b{s}\)</span>.
+<p>A square matrix has a special vector for wich it acts as a number: $Ab{s}=lambda b{s}$.
 These vectors and numbers are called eigen-vectors and eigen-values, and they are an important
 property of the matrix.
 Since:</p>
 <div class="math notranslate nohighlight" id="equation-eigen">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eigen" title="Permalink to this equation">¶</a></span>\[A \b{s} - \lambda \b{s} = (A - \lambda I) \b{s} = 0\]</div>
-<p>is a homogeneous system, it has a non-trivial solutions only if <span class="math notranslate nohighlight">\(\text{det}(A - \lambda I)=0\)</span>
-this gives an <span class="math notranslate nohighlight">\(n^{th}\)</span> order algebriac equation to find <span class="math notranslate nohighlight">\(\lambda\)</span>, and in general there will be <span class="math notranslate nohighlight">\(n\)</span>
+<p>is a homogeneous system, it has a non-trivial solutions only if $text{det}(A - lambda I)=0$
+this gives an $n^{th}$ order algebriac equation to find $lambda$, and in general there will be $n$
 complex roots, of this equation.
-For each root, one finds eigen-vectors <span class="math notranslate nohighlight">\(\b{s}\)</span>.</p>
+For each root, one finds eigen-vectors $b{s}$.</p>
 <p>Example:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A &amp;=
@@ -389,8 +443,8 @@ For each root, one finds eigen-vectors <span class="math notranslate nohighlight
 &amp;=
 \left[(\lambda -2)(1+(\lambda-2))^2 - \lambda + 2 \right]\\
 &amp;= (\lambda - 2 \left[(\lambda -2 )^2-2 \right]=0\\\end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(\lambda_1 = 2\)</span> and <span class="math notranslate nohighlight">\(\lambda_{2,3} = 2\pm \sqrt{2}\)</span>
-and for each eigen-value there is an eigen-vector, for example for <span class="math notranslate nohighlight">\(\lambda_1 = 2\)</span> we get:</p>
+<p>Therefore $lambda_1 = 2$ and $lambda_{2,3} = 2pm sqrt{2}$
+and for each eigen-value there is an eigen-vector, for example for $lambda_1 = 2$ we get:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}(A-2I)\b{s_1} &amp;=
 \begin{bmatrix}
@@ -399,12 +453,12 @@ and for each eigen-value there is an eigen-vector, for example for <span class="
     0   &amp;   -1    &amp;     0
 \end{bmatrix}
 \b{s_1} = 0\end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(s_1= \begin{bmatrix} 0   &amp;   1   &amp;   0   \end{bmatrix}^T\)</span>, and the
-other eigen-vectors <span class="math notranslate nohighlight">\(\b{s}_{2,3}=\left[ 1 \pm \sqrt{2} \right]^T\)</span>.</p>
+<p>Therefore $s_1= begin{bmatrix} 0   &amp;   1   &amp;   0   end{bmatrix}^T$, and the
+other eigen-vectors $b{s}_{2,3}=left[ 1 pm sqrt{2} right]^T$.</p>
 <p>From the definition we can deduce the factorization:</p>
 <div class="math notranslate nohighlight">
 \[AS = S\Lambda\]</div>
-<p>where columns of <span class="math notranslate nohighlight">\(S\)</span> are eigen-vectors and <span class="math notranslate nohighlight">\(\Lambda\)</span> is a diagonal matrix with $\b{e}-values \lambda
+<p>where columns of $S$ are eigen-vectors and $Lambda$ is a diagonal matrix with $b{e}-values lambda
 on it’s diagonal If we recall how the matrices multiply this factorization easily follows as a
 shorthand for</p>
 <div class="math notranslate nohighlight">
@@ -430,17 +484,17 @@ shorthand for</p>
     0          &amp;    \lambda_2           &amp; 0  \\
     \vdots          &amp;    0              &amp;   \ddots \\
 \end{bmatrix}\end{split}\]</div>
-<p>Then, if <span class="math notranslate nohighlight">\(S\)</span> is full rank, <span class="math notranslate nohighlight">\(A\)</span> can be decomposed as</p>
+<p>Then, if $S$ is full rank, $A$ can be decomposed as</p>
 <div class="math notranslate nohighlight">
 \[A = S \Lambda S^{-1}\]</div>
 <p>which is called the <strong>Spectral Decomposition</strong>. Not all matrices enjoy this kind of factorization,
 but an important class of symmetric matrices does.
-Another way of looking at this factorization follows from the fact that <span class="math notranslate nohighlight">\(Ax=b\)</span> can be seen as
-expressing the vector <span class="math notranslate nohighlight">\(b\)</span> in terms of columns of matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+Another way of looking at this factorization follows from the fact that $Ax=b$ can be seen as
+expressing the vector $b$ in terms of columns of matrix $A$.</p>
 <div class="math notranslate nohighlight">
 \[b = x_1 a_1 + x_2 a_2 + \dots + x_n a_n\]</div>
-<p>In other words, if columns of <span class="math notranslate nohighlight">\(A\)</span> for a basis, this is simply a change of basis formula, expressing
-vector <span class="math notranslate nohighlight">\(b\)</span> in that new basis, rather than standard basis made of 1’s and 0. And <span class="math notranslate nohighlight">\(x=A^{-1}b\)</span> are the coordinates of <span class="math notranslate nohighlight">\(b\)</span> in that new basis. Indeed, <span class="math notranslate nohighlight">\(b\)</span> in the standard basis</p>
+<p>In other words, if columns of $A$ for a basis, this is simply a change of basis formula, expressing
+vector $b$ in that new basis, rather than standard basis made of 1’s and 0. And $x=A^{-1}b$ are the coordinates of $b$ in that new basis. Indeed, $b$ in the standard basis</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}e_1 =
 \begin{bmatrix}
@@ -458,17 +512,17 @@ vector <span class="math notranslate nohighlight">\(b\)</span> in that new basis
 \end{bmatrix}
 =
 b_1 e_1 + b_2 e_2 + \dots + b_n e_n\end{split}\]</div>
-<p>showing that <span class="math notranslate nohighlight">\(b_i\)</span> is the component of b in the direction of <span class="math notranslate nohighlight">\(e_i\)</span>. And so <span class="math notranslate nohighlight">\(x_i\)</span> is similarly
-a component of <span class="math notranslate nohighlight">\(b\)</span>, now is the direction of <span class="math notranslate nohighlight">\(a_i\)</span>.</p>
-<p>Then if we act with <span class="math notranslate nohighlight">\(A=S\Lambda S^{-1}\)</span> on <span class="math notranslate nohighlight">\(x\)</span> we get</p>
+<p>showing that $b_i$ is the component of b in the direction of $e_i$. And so $x_i$ is similarly
+a component of $b$, now is the direction of $a_i$.</p>
+<p>Then if we act with $A=SLambda S^{-1}$ on $x$ we get</p>
 <div class="math notranslate nohighlight">
 \[Ax=S\Lambda (S^{-1}x)\]</div>
 <p>This can be interpreted, reading from right to left, as saying that:</p>
 <ol class="arabic simple">
-<li><p>change the basis to that of the eigen-vectors to find new components of <span class="math notranslate nohighlight">\(x\)</span> in that basis as
-<span class="math notranslate nohighlight">\(S^{-1}x\)</span>;</p></li>
-<li><p>then strech the new coordinates by eigen-values: <span class="math notranslate nohighlight">\(\Lambda(S^{-1}x)\)</span>;</p></li>
-<li><p>and return to the original basis by multiplying with <span class="math notranslate nohighlight">\(S\)</span>.</p></li>
+<li><p>change the basis to that of the eigen-vectors to find new components of $x$ in that basis as
+$S^{-1}x$;</p></li>
+<li><p>then strech the new coordinates by eigen-values: $Lambda(S^{-1}x)$;</p></li>
+<li><p>and return to the original basis by multiplying with $S$.</p></li>
 </ol>
 </div>
 <div class="section" id="singular-value-decomposition-svd">
@@ -476,19 +530,19 @@ a component of <span class="math notranslate nohighlight">\(b\)</span>, now is t
 <div class="math notranslate nohighlight">
 \[\begin{split}A &amp;=U \Sigma V^T\\
 &amp;= \sigma_1 u_1 v_1^T + \sigma_2 u_2 v_2^T + \cdot + \sigma_n u_n v_n^T\\\end{split}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(U \in \bb{R}^{m \times m}, V \in \bb{R}^{n\times n}, \Sigma \in \bb{R}^{m \times n}\)</span>, <span class="math notranslate nohighlight">\(n \)</span> is the rank, and <span class="math notranslate nohighlight">\(\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_n\)</span>.</p>
+<p>Where $U in bb{R}^{m times m}, V in bb{R}^{ntimes n}, Sigma in bb{R}^{m times n}$, $n $ is the rank, and $sigma_1 geq sigma_2 geq cdots geq sigma_n$.</p>
 </div>
 <div class="section" id="solvability-conditions-for-linear-systems">
 <h3>Solvability Conditions for Linear Systems<a class="headerlink" href="#solvability-conditions-for-linear-systems" title="Permalink to this headline">¶</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be <span class="math notranslate nohighlight">\(n \times n\)</span> and consider <span class="math notranslate nohighlight">\(Ax=b\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is not singular, the this
-system has a unique solution <span class="math notranslate nohighlight">\(x=A^{-1}b\)</span>. Then the question does a singular matrix have
-a solution? The answer is it depends on the relationship between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.
-<span class="math notranslate nohighlight">\(Ax\)</span> is always a combinantion of columns of <span class="math notranslate nohighlight">\(A\)</span>, no matter what <span class="math notranslate nohighlight">\(x\)</span> is. Therefore, for
-<span class="math notranslate nohighlight">\(Ax=b\)</span> to have a solution, <span class="math notranslate nohighlight">\(b\)</span> must be a combination of columns of <span class="math notranslate nohighlight">\(A\)</span>. In another word,
-<span class="math notranslate nohighlight">\(b\)</span> must be in the columns space of <span class="math notranslate nohighlight">\(A, b \in C(A)\)</span>. This condition on <span class="math notranslate nohighlight">\(b\)</span> can be expressed
-as an orthogonality condition, as any vector in <span class="math notranslate nohighlight">\(C(A)\)</span> must be orthogonal to the left
-nullspace of <span class="math notranslate nohighlight">\(A, N(A^T)\)</span>. <span class="math notranslate nohighlight">\(y^Tb=0\)</span>, solvability condition for <span class="math notranslate nohighlight">\(Ax=b\)</span>, where <span class="math notranslate nohighlight">\(A^Ty=0\)</span>.
-The equation <span class="math notranslate nohighlight">\(A^T y=0\)</span> is called the adjoint problem.</p>
+<p>Let $A$ be $n times n$ and consider $Ax=b$. If $A$ is not singular, the this
+system has a unique solution $x=A^{-1}b$. Then the question does a singular matrix have
+a solution? The answer is it depends on the relationship between $A$ and $b$.
+$Ax$ is always a combinantion of columns of $A$, no matter what $x$ is. Therefore, for
+$Ax=b$ to have a solution, $b$ must be a combination of columns of $A$. In another word,
+$b$ must be in the columns space of $A, b in C(A)$. This condition on $b$ can be expressed
+as an orthogonality condition, as any vector in $C(A)$ must be orthogonal to the left
+nullspace of $A, N(A^T)$. $y^Tb=0$, solvability condition for $Ax=b$, where $A^Ty=0$.
+The equation $A^T y=0$ is called the adjoint problem.</p>
 <p>Example:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
@@ -496,8 +550,8 @@ The equation <span class="math notranslate nohighlight">\(A^T y=0\)</span> is ca
     2   &amp;   2   &amp;   8\\
     0   &amp;  -1   &amp;   -3
 \end{bmatrix}\end{split}\]</div>
-<p>is singular because <span class="math notranslate nohighlight">\(A(:,3)=2A(:,1)+3A(:,2)\)</span>. It’s left nullspace is spanned by
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 1  &amp;   -1   &amp;   -2 \end{bmatrix}\)</span>, since <span class="math notranslate nohighlight">\(1.row_1 - row_2 - 2.row_3=0\)</span>, or:</p>
+<p>is singular because $A(:,3)=2A(:,1)+3A(:,2)$. It’s left nullspace is spanned by
+$begin{bmatrix} 1  &amp;   -1   &amp;   -2 end{bmatrix}$, since $1.row_1 - row_2 - 2.row_3=0$, or:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A^T y=
 \begin{bmatrix}
@@ -512,23 +566,42 @@ The equation <span class="math notranslate nohighlight">\(A^T y=0\)</span> is ca
 \begin{bmatrix}
     0   \\   0   \\   0\\
 \end{bmatrix}\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(Ax=b\)</span> will have a solution only if <span class="math notranslate nohighlight">\(b\)</span> satisfies <span class="math notranslate nohighlight">\(y^T b = b_1 - b_2 - 2_b3 = 0\)</span>.
-In fact, if that condition is satisfied, <span class="math notranslate nohighlight">\(Ax=b\)</span> will have infinitely many solutions, as one can
-add to <span class="math notranslate nohighlight">\(x\)</span> the nullspace of <span class="math notranslate nohighlight">\(A,Ax_0=0\)</span>, so that if <span class="math notranslate nohighlight">\(x\)</span> is a solution then <span class="math notranslate nohighlight">\(x+x_0\)</span> is also a
-solution, <span class="math notranslate nohighlight">\(A(x+x_0)=Ax+Ax_0=b\)</span>. This is the <strong>Fredholm alternative</strong>.</p>
+<p>Therefore, $Ax=b$ will have a solution only if $b$ satisfies $y^T b = b_1 - b_2 - 2_b3 = 0$.
+In fact, if that condition is satisfied, $Ax=b$ will have infinitely many solutions, as one can
+add to $x$ the nullspace of $A,Ax_0=0$, so that if $x$ is a solution then $x+x_0$ is also a
+solution, $A(x+x_0)=Ax+Ax_0=b$. This is the <strong>Fredholm alternative</strong>.</p>
 <p>All this will boil down to the three fallowing cases:</p>
 <ol class="arabic simple">
-<li><p>If <span class="math notranslate nohighlight">\(Ax=b\)</span> where <span class="math notranslate nohighlight">\(A \in \bb{R}^{m \times m}\)</span>, and <span class="math notranslate nohighlight">\(A\)</span> is singular, the solution is given by
-<span class="math notranslate nohighlight">\(x=A^{-1}b\)</span>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is singular and <span class="math notranslate nohighlight">\(b \in C(A)\)</span>, in another word it’s orthogonal to the left nullspace
-of <span class="math notranslate nohighlight">\(b\)</span>. There is infinitely many solutions.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is singular and <span class="math notranslate nohighlight">\(b \notin C(A)\)</span>, in another word it’s not orthogonal to the left nullspace
-of <span class="math notranslate nohighlight">\(b\)</span>. There is no solution.</p></li>
+<li><p>If $Ax=b$ where $A in bb{R}^{m times m}$, and $A$ is singular, the solution is given by
+$x=A^{-1}b$.</p></li>
+<li><p>If $A$ is singular and $b in C(A)$, in another word it’s orthogonal to the left nullspace
+of $b$. There is infinitely many solutions.</p></li>
+<li><p>If $A$ is singular and $b notin C(A)$, in another word it’s not orthogonal to the left nullspace
+of $b$. There is no solution.</p></li>
 </ol>
 </div>
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -538,17 +611,17 @@ of <span class="math notranslate nohighlight">\(b\)</span>. There is no solution
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="probability.html" title="previous page">Probability</a>
-    <a class='right-next' id="next-link" href="statistics.html" title="next page">Statistcal Modeling</a>
+    <a class='left-prev' id="prev-link" href="1.html" title="previous page">General Advice for Linear-Regression Priors</a>
+    <a class='right-next' id="next-link" href="mcmc.html" title="next page">Test</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Abdalaziz Rashid<br/>
+          By The Jupyter Book community<br/>
         
-            &copy; Copyright 2020, Abdalaziz Rashid.<br/>
+            &copy; Copyright 2020.<br/>
       </p>
     </div>
   </footer>

@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>General Advice for Linear-Regression Priors &#8212; My Jupyter Book</title>
+    <title>Content with notebooks &#8212; My Jupyter Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,8 +38,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear Algebra" href="linalg.html" />
-    <link rel="prev" title="Content with notebooks" href="../my_notes/notebooks.html" />
+    <link rel="next" title="General Advice for Linear-Regression Priors" href="../chapters/1.html" />
+    <link rel="prev" title="Markdown Files" href="markdown.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -89,47 +89,47 @@
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="../my_notes/content.html">
+  <a class="reference internal" href="content.html">
    Content in Jupyter Book
   </a>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/intro.html">
+    <a class="reference internal" href="intro.html">
      Welcome to your Jupyter Book
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/markdown.html">
+    <a class="reference internal" href="markdown.html">
      Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/notebooks.html">
-     Content with notebooks
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapters/1.html">
      General Advice for Linear-Regression Priors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="linalg.html">
+    <a class="reference internal" href="../chapters/linalg.html">
      Linear Algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="mcmc.html">
+    <a class="reference internal" href="../chapters/mcmc.html">
      Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="probability.html">
+    <a class="reference internal" href="../chapters/probability.html">
      Probability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="statistics.html">
+    <a class="reference internal" href="../chapters/statistics.html">
      Statistcal Modeling
     </a>
    </li>
@@ -177,9 +177,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/1.rst"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/my_notes/notebooks.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -196,6 +196,28 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/my_notes/notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/my_notes/notebooks.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -204,7 +226,24 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown-notebooks">
+   Markdown + notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-markdown">
+   MyST markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
+   Code blocks and outputs
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -213,19 +252,79 @@
         
               <div>
                 
-  <div class="section" id="general-advice-for-linear-regression-priors">
-<h1>General Advice for Linear-Regression Priors<a class="headerlink" href="#general-advice-for-linear-regression-priors" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Intercept  <span class="math notranslate nohighlight">\(\alpha\)</span>
-We have no idea where it might end up so need to use
-broad Gaussian prior.</p></li>
-<li><p>Slope <span class="math notranslate nohighlight">\(\beta\)</span>:
-Gaussian centered on zero, scale should be so extreme for
-regularization.</p></li>
-<li><p>Scale <span class="math notranslate nohighlight">\(\bb{R,Q, Z} \RR \sigma \bold{R}\)</span>
-Uniform with reasonable upper bound, we may use Cauchy or
-exponential for regularization.</p></li>
-</ul>
+  <div class="section" id="content-with-notebooks">
+<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>You can also create content with Jupyter Notebooks. This means that you can include
+code blocks and their outputs in your book.</p>
+<div class="section" id="markdown-notebooks">
+<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
+<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo.png" /></p>
+<p>You an also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+math^{blocks}
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mbox{mean} la_{tex} \\ \\
+math blocks
+\end{aligned}
+\end{split}\]</div>
+<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
+</div>
+<div class="section" id="myst-markdown">
+<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">¶</a></h2>
+<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
+out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
+or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
+</div>
+<div class="section" id="code-blocks-and-outputs">
+<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Book will also embed your code blocks and output in your book.
+For example, here’s some sample Matplotlib code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+plt.ion()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Fixing random state for reproducibility
+np.random.seed(19680801)
+
+N = 10
+data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
+data = np.array(data).T
+cmap = plt.cm.coolwarm
+rcParams[&#39;axes.prop_cycle&#39;] = cycler(color=cmap(np.linspace(0, 1, N)))
+
+
+from matplotlib.lines import Line2D
+custom_lines = [Line2D([0], [0], color=cmap(0.), lw=4),
+                Line2D([0], [0], color=cmap(.5), lw=4),
+                Line2D([0], [0], color=cmap(1.), lw=4)]
+
+fig, ax = plt.subplots(figsize=(10, 5))
+lines = ax.plot(data)
+ax.legend(custom_lines, [&#39;Cold&#39;, &#39;Medium&#39;, &#39;Hot&#39;]);
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebooks_2_0.png" src="../_images/notebooks_2_0.png" />
+</div>
+</div>
+<p>There is a lot more that you can do with outputs (such as including interactive outputs)
+with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -241,7 +340,7 @@ exponential for regularization.</p></li>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters"
+            path: "./my_notes"
         },
         predefinedOutput: true
     }
@@ -256,8 +355,8 @@ exponential for regularization.</p></li>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../my_notes/notebooks.html" title="previous page">Content with notebooks</a>
-    <a class='right-next' id="next-link" href="linalg.html" title="next page">Linear Algebra</a>
+    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">Markdown Files</a>
+    <a class='right-next' id="next-link" href="../chapters/1.html" title="next page">General Advice for Linear-Regression Priors</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

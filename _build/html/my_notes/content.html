@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>General Advice for Linear-Regression Priors &#8212; My Jupyter Book</title>
+    <title>Content in Jupyter Book &#8212; My Jupyter Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,8 +38,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear Algebra" href="linalg.html" />
-    <link rel="prev" title="Content with notebooks" href="../my_notes/notebooks.html" />
+    <link rel="next" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="my-notes" href="../README.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -89,47 +89,47 @@
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="../my_notes/content.html">
+  <a class="current reference internal" href="#">
    Content in Jupyter Book
   </a>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/intro.html">
+    <a class="reference internal" href="intro.html">
      Welcome to your Jupyter Book
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/markdown.html">
+    <a class="reference internal" href="markdown.html">
      Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../my_notes/notebooks.html">
+    <a class="reference internal" href="notebooks.html">
      Content with notebooks
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapters/1.html">
      General Advice for Linear-Regression Priors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="linalg.html">
+    <a class="reference internal" href="../chapters/linalg.html">
      Linear Algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="mcmc.html">
+    <a class="reference internal" href="../chapters/mcmc.html">
      Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="probability.html">
+    <a class="reference internal" href="../chapters/probability.html">
      Probability
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="statistics.html">
+    <a class="reference internal" href="../chapters/statistics.html">
      Statistcal Modeling
     </a>
    </li>
@@ -177,9 +177,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/1.rst"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/my_notes/content.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -213,19 +213,12 @@
         
               <div>
                 
-  <div class="section" id="general-advice-for-linear-regression-priors">
-<h1>General Advice for Linear-Regression Priors<a class="headerlink" href="#general-advice-for-linear-regression-priors" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Intercept  <span class="math notranslate nohighlight">\(\alpha\)</span>
-We have no idea where it might end up so need to use
-broad Gaussian prior.</p></li>
-<li><p>Slope <span class="math notranslate nohighlight">\(\beta\)</span>:
-Gaussian centered on zero, scale should be so extreme for
-regularization.</p></li>
-<li><p>Scale <span class="math notranslate nohighlight">\(\bb{R,Q, Z} \RR \sigma \bold{R}\)</span>
-Uniform with reasonable upper bound, we may use Cauchy or
-exponential for regularization.</p></li>
-</ul>
+  <div class="section" id="content-in-jupyter-book">
+<h1>Content in Jupyter Book<a class="headerlink" href="#content-in-jupyter-book" title="Permalink to this headline">¶</a></h1>
+<p>There are many ways to write content in Jupyter Book. This short section
+covers a few tips for how to do so.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -241,7 +234,7 @@ exponential for regularization.</p></li>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters"
+            path: "./my_notes"
         },
         predefinedOutput: true
     }
@@ -256,8 +249,8 @@ exponential for regularization.</p></li>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../my_notes/notebooks.html" title="previous page">Content with notebooks</a>
-    <a class='right-next' id="next-link" href="linalg.html" title="next page">Linear Algebra</a>
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">my-notes</a>
+    <a class='right-next' id="next-link" href="intro.html" title="next page">Welcome to your Jupyter Book</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
