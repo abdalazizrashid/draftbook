@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex numbers &#8212; My Notes</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My Notes</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   This is where I collect my notes
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="linalg.html">
+   Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="probability.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="statistics.html">
+   Statistcal Modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mcmc.html">
+   Test
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/Untitled1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Untitled1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polar-reprsentation-of-complex-numbers">
+   Polar reprsentation of complex numbers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-argument-of-z">
+     The argument of
+     <span class="math notranslate nohighlight">
+      \(z\)
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#some-equalities">
+       Some equalities
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-moivre-s-formula">
+   De Moivre’s formula
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roots-of-complex-numbers">
+   Roots of complex numbers
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="complex-numbers">
+<h1>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="polar-reprsentation-of-complex-numbers">
+<h2>Polar reprsentation of complex numbers<a class="headerlink" href="#polar-reprsentation-of-complex-numbers" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+z=x+yi
+\]</div>
+<p>We can describe <span class="math notranslate nohighlight">\(z\)</span> in <strong>Polar Cordinates</strong> <span class="math notranslate nohighlight">\((r, \theta)\)</span> where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the origin <span class="math notranslate nohighlight">\(r=|z|\)</span> and the angle <span class="math notranslate nohighlight">\(\theta\)</span> between the posative <span class="math notranslate nohighlight">\(x-axis\)</span> and the line segment from <span class="math notranslate nohighlight">\(z\)</span>.
+The relation between the <strong>Cartesian</strong> and <strong>Polar Cordinates</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+x = r \cos \theta \\
+y = r \sin \theta
+\end{align}
+\end{split}\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+z=r\cos \theta + r \sin \theta i \\
+= r(\cos \theta + \sin \theta i)
+\end{align}
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(|z|\)</span> is easy to find, but <span class="math notranslate nohighlight">\(\theta\)</span> is not unique since <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\cos\)</span> are periodic, say <span class="math notranslate nohighlight">\(\theta = 45 = \dfrac{\pi}{4} = 2\pi+\dfrac{\pi}{4}, \cdots\)</span> thus we need to to find the a specific angle  and that’s called the <strong>Principle Argument</strong> of <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title"> Definition:</p>
+<p>The <strong>Principle Argument</strong> of <span class="math notranslate nohighlight">\(z\)</span> <span class="math notranslate nohighlight">\(Arg(z)\)</span> is the value if <span class="math notranslate nohighlight">\(\theta\)</span> for which <span class="math notranslate nohighlight">\(-\pi &lt; \theta \leq x\)</span></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">Place</span> <span class="pre">holder</span></code></p>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Let <span class="math notranslate nohighlight">\(z \in \mathbb{C}\)</span> where the polar representation is <span class="math notranslate nohighlight">\((r, \theta) = (1, \frac{\pi}{4})\)</span>. Find the Cartesian Cordinates of <span class="math notranslate nohighlight">\(z\)</span>, that is find <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> such that <span class="math notranslate nohighlight">\(z=x+yi\)</span>.</p>
+<p><strong>Solution:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z=r(\cos \theta + \sin \theta)\\
+|r| = \sqrt{x^2 + y^2} = 1\\
+x = r \cos \theta = \cos \dfrac{\pi}{4} = \dfrac{\sqrt{2}}{2}\\
+y = r \sin \theta = \sin \dfrac{\pi}{4} = \dfrac{\sqrt{2}}{2}i\\
+\end{align*}\]</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Let <span class="math notranslate nohighlight">\(z \in \mathbb{C}\)</span> where the polar representation is <span class="math notranslate nohighlight">\((r, \theta) = (3, \frac{7\pi}{4})\)</span>. Find the Cartesian Cordinates of <span class="math notranslate nohighlight">\(z\)</span>, that is find <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> such that <span class="math notranslate nohighlight">\(z=x+yi\)</span>.</p>
+<p><strong>Solution:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z=r(\cos \theta + \sin \theta)\\
+|r| = \sqrt{x^2 + y^2} = 1\\
+x = r \cos \theta = 3 \cos \dfrac{7\pi}{4} = \dfrac{3}{\sqrt{2}}\\
+y = r \sin \theta = 3 \sin \dfrac{7\pi}{4} = -\dfrac{3}{\sqrt{2}}i\\
+\end{align*}\]</div>
+</div>
+<p><span class="math notranslate nohighlight">\(arg \, z = \{Arg Z  + 2\pi k:k=0, \pm 1, \pm 2, \cdots, z \neq 0\}\)</span>
+The difference between the argument of <span class="math notranslate nohighlight">\(z\)</span> <span class="math notranslate nohighlight">\(arg\,z\)</span> and the Principle Argument of <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(Arg\,z\)</span> is that <span class="math notranslate nohighlight">\(Arg \, z\)</span> is between <span class="math notranslate nohighlight">\(-\pi &lt; \theta \leq \pi\)</span> and <span class="math notranslate nohighlight">\(arg\,z\)</span> is any value as multiple of <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e9841ec8-9f11-4360-9e60-200e11a37d2a">
+<span class="eqno">()<a class="headerlink" href="#equation-e9841ec8-9f11-4360-9e60-200e11a37d2a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;Arg(i) = \dfrac{\pi}{2}\\
+&amp;Arg(1) = 0\\
+&amp;Arg(-1) = \pi\\
+&amp;Arg(1-i) = -\dfrac{\pi}{4}\\
+&amp;Arg(-i) = -\dfrac{\pi}{2}, \dots
+\end{align}\]</div>
+<p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">plot</span> <span class="pre">here</span></code></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>What is the principle argument of:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2b882ac6-09fe-43d1-bb12-9f18b99710c6">
+<span class="eqno">()<a class="headerlink" href="#equation-2b882ac6-09fe-43d1-bb12-9f18b99710c6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;Arg(\cos\dfrac{12\pi}{4} + \sin\dfrac{12\pi}{4}i)\\
+&amp;Arg(\cos\dfrac{-\pi}{18} + \sin\dfrac{-\pi}{18}i)\\
+&amp;Arg(\cos\dfrac{\pi}{3} + \sin\dfrac{\pi}{3}i)\\
+&amp;Arg(\cos\dfrac{-\pi}{18} + \sin\dfrac{-\pi}{18}i)
+\end{align}\]</div>
+<p><strong>Solution:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-573b1989-d7d7-43db-b5c2-a1421e60326c">
+<span class="eqno">()<a class="headerlink" href="#equation-573b1989-d7d7-43db-b5c2-a1421e60326c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;\cos\dfrac{12\pi}{4} = -1\\
+&amp;\sin\dfrac{12\pi}{4} = 0\\
+\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-96f02b18-b13a-474a-a9b9-94d24ab53831">
+<span class="eqno">()<a class="headerlink" href="#equation-96f02b18-b13a-474a-a9b9-94d24ab53831" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;\cos\dfrac{-\pi}{18} = \cos -10\\
+&amp;\sin\dfrac{-\pi}{18} = \sin -10\\
+\end{align}\]</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">plot</span> <span class="pre">here</span></code></p>
+<p>Since <span class="math notranslate nohighlight">\(\exp(i \theta) = \cos \theta + \sin \theta i\)</span> thus <span class="math notranslate nohighlight">\(z=r\exp(i\theta)\)</span> note that <span class="math notranslate nohighlight">\(\exp(i(\theta+2\pi)) = \exp(i\theta)) = \exp(i(\theta+4\pi)) = \cdots = \exp(i(\theta+2\pi k))\quad \text{ where } k \in \mathcal{z}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-45f8a04f-eb19-4322-bfb8-0a8a2abcdad8">
+<span class="eqno">()<a class="headerlink" href="#equation-45f8a04f-eb19-4322-bfb8-0a8a2abcdad8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;\exp(i\dfrac{\pi}{2}) = i\\
+&amp;\exp(i\pi) = -1\\
+&amp;\exp(i\dfrac{\pi}{4}) = \dfrac{1}{\sqrt{2}}\\
+&amp;\exp(i2\pi ) = 1\\
+&amp;\cdots\\
+\end{align}\]</div>
+<p>We can find the inverse of complex number:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6488a19f-34ce-4147-8799-4751f9e4f2e3">
+<span class="eqno">()<a class="headerlink" href="#equation-6488a19f-34ce-4147-8799-4751f9e4f2e3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\dfrac{1}{\exp(i\theta)} &amp;= \dfrac{\overline{ \exp(i\theta) }} {\exp(i\theta) \overline{\exp(i\theta)}}\\
+&amp;=\dfrac{\exp(-i\theta)}{\exp(i\theta)\exp(-i\theta)} = \exp(-i\theta)
+\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\exp((\theta+\varphi)i)=\exp(i\theta)+\exp(i\varphi)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+|\exp(i\theta)|=1
+\]</div>
+<p>where the overline <span class="math notranslate nohighlight">\(\overline{a+b\rm{i}}\)</span> means complex conjugate</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d55c5687-d6b4-41be-b0b9-6d8460b7f0b2">
+<span class="eqno">()<a class="headerlink" href="#equation-d55c5687-d6b4-41be-b0b9-6d8460b7f0b2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\overline{\exp(i\theta)}&amp;= \cos \theta - \sin \theta i\\
+&amp;= cos \theta + sin (-\theta i)\\
+&amp;= cos (-\theta) + sin (-\theta i)\\
+\end{align}\]</div>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Find <span class="math notranslate nohighlight">\(\dfrac{1}{z}\)</span> where <span class="math notranslate nohighlight">\(z = \exp(\dfrac{\pi}{2}i)\)</span>.</p>
+<p><strong>Solution:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\dfrac{1}{z}&amp;=\dfrac{\overline{z}}{z \cdot \overline{z}}\\
+&amp;=\dfrac{\exp(-\frac{\pi}{2}i)}{\exp(\frac{\pi}{2}i)\cdot \exp(-\frac{\pi}{2}i)}\\
+&amp;= \exp(-\frac{\pi}{2}i)
+\end{align*}\]</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(z_1 = \dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{2}}{2}i\)</span> and  <span class="math notranslate nohighlight">\(z_2 = \dfrac{1}{2} + \dfrac{\sqrt{3}}{2}i\)</span></p>
+<p>Find <span class="math notranslate nohighlight">\(z_1\cdot z_2\)</span>.</p>
+<p><strong>Solution:</strong>
+First we need to convert to polar coordinates:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f5ecc4e4-d5c3-42bc-bf11-ebf783984d61">
+<span class="eqno">()<a class="headerlink" href="#equation-f5ecc4e4-d5c3-42bc-bf11-ebf783984d61" title="Permalink to this equation">¶</a></span>\[\begin{align}
+r &amp;= \sqrt{\left(\dfrac{\sqrt{2}}{2}\right)^2+\left(\dfrac{\sqrt{2}}{2}\right)^2}=1\\
+\theta  &amp;= \tan^{-1} \dfrac{x}{y}\\
+&amp;= \tan^{-1} \dfrac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} = \dfrac{\pi}{4}
+\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2e548bc3-7f5d-4ca7-9e85-e89f01f573c7">
+<span class="eqno">()<a class="headerlink" href="#equation-2e548bc3-7f5d-4ca7-9e85-e89f01f573c7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+z_1 &amp;= \exp(\frac{pi}{4}i)\\
+z_2 &amp;= \exp(\frac{pi}{3}i)\\
+z_1 \cdot z_2 &amp;= \exp((\frac{\pi}{4}+\frac{\pi}{3})i)\\ 
+&amp;= \exp{\frac{7\pi}{12}i}
+\end{align}\]</div>
+</div>
+<div class="section" id="the-argument-of-z">
+<h3>The argument of <span class="math notranslate nohighlight">\(z\)</span><a class="headerlink" href="#the-argument-of-z" title="Permalink to this headline">¶</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-6dd764af-3d77-446b-b783-b0234dfbebfa">
+<span class="eqno">()<a class="headerlink" href="#equation-6dd764af-3d77-446b-b783-b0234dfbebfa" title="Permalink to this equation">¶</a></span>\[\begin{align}
+arg(\overline{z}) &amp;= -arg(z)\\
+arg(\dfrac{1}{z}) &amp;= -arg(z)\\
+arg(z_1 \cdot z_2) &amp;= arg(z_1) + arg(z_2)\\
+\end{align}\]</div>
+<div class="section" id="some-equalities">
+<h4>Some equalities<a class="headerlink" href="#some-equalities" title="Permalink to this headline">¶</a></h4>
+<div class="amsmath math notranslate nohighlight" id="equation-1d5e75d0-2699-4395-9126-dd64b4f54d08">
+<span class="eqno">()<a class="headerlink" href="#equation-1d5e75d0-2699-4395-9126-dd64b4f54d08" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;arg(i^2) = arg(-1) = \pi\\
+&amp;arg(\dfrac{\pi}{2}) = arg(\dfrac{\pi}{2}) = \pi\\
+&amp;arg(-1^2)=arg(1)=0\\
+&amp;arg(-1)+arg(-1)= \pi + \pi =2\pi
+\end{align}\]</div>
+<p>We notice that the equality is held only for some argument and for some other arguments
+is held by adding <span class="math notranslate nohighlight">\(\mod(2\pi)\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="de-moivre-s-formula">
+<h2>De Moivre’s formula<a class="headerlink" href="#de-moivre-s-formula" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\exp(i\theta)^n = \exp(i n \theta) = (\cos \theta + \sin \theta i)^n = \cos n\theta + \sin n\theta i\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\exp(i\theta)\cdot \exp(i\theta) = \exp((\theta + \theta)i) = \exp(2\theta i)\)</span> and <span class="math notranslate nohighlight">\(\exp(i\theta)^3=\exp(3\theta i)\)</span>.
+The formula also hold for negative numbers. This formula is amazing since it help us deduce facts about the <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\cos\)</span> functions, such consequences of De Moivre’s formula we can use it to derive equations for the <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\cos\)</span> let <span class="math notranslate nohighlight">\(n=3\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\cos 3\theta = \cos^3 \theta
+\]</div>
+<p>remember that <span class="math notranslate nohighlight">\((a+b)^3=a^3 + 3a^2b + 3ab^2 + b^3\)</span>, we can apply it here:</p>
+<div class="math notranslate nohighlight">
+\[
+(\cos \theta + \sin i\theta)^3 = \cos^3 \theta + 3\cos^2 \sin i\theta - 3\cos \theta \sin^2 \theta + \sin^3 i\theta
+\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight">
+\[
+\cos 3\theta = \cos^3 \theta - 3 \cos \theta \sin^2 \theta
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sin 3\theta = -\sin^3 \theta + 3 \cos^2 \theta \sin \theta
+\]</div>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Find <span class="math notranslate nohighlight">\((1+i)^{20}\)</span></p>
+<p><strong>Solution:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+r &amp;= \sqrt{1 + i} = \sqrt{2}\\
+\theta &amp;= \tan^{-1} \frac{1}{1} = \frac{\pi}{4}\\
+(1+i)^{20} &amp;= \sqrt{2}^20 \cos 20 \cdot \frac{\pi}{4} + \sqrt{2} \sin \frac{\pi}{4}i\\ 
+&amp;=-1024
+\end{align*}\]</div>
+</div>
+</div>
+<div class="section" id="roots-of-complex-numbers">
+<h2>Roots of complex numbers<a class="headerlink" href="#roots-of-complex-numbers" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title"> Definition:</p>
+<p>Let <span class="math notranslate nohighlight">\(w \in \mathbb{C}\)</span>. An <span class="math notranslate nohighlight">\(n^{th}\)</span> root of <span class="math notranslate nohighlight">\(w\)</span> is a complex number <span class="math notranslate nohighlight">\(z\)</span> such that <span class="math notranslate nohighlight">\(z^n = w\)</span></p>
+</div>
+<p>We notice that if <span class="math notranslate nohighlight">\(w\neq 0\)</span> there are exactly <span class="math notranslate nohighlight">\(n\)</span> distinct <span class="math notranslate nohighlight">\(n^{th}\)</span> roots. We use the Polar form for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6b2befe4-106f-4deb-86d4-99790afa4aeb">
+<span class="eqno">()<a class="headerlink" href="#equation-6b2befe4-106f-4deb-86d4-99790afa4aeb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+w &amp;= \rho\exp(\varphi i)\\
+z &amp;=  r \exp(\theta i)
+\end{align}\]</div>
+<p>Thus the equation <span class="math notranslate nohighlight">\(z^n=w\)</span> becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7001380b-576a-4c46-b25f-09ac435b65e7">
+<span class="eqno">()<a class="headerlink" href="#equation-7001380b-576a-4c46-b25f-09ac435b65e7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+r^n \exp(n \theta i) &amp;= \rho \exp(\varphi i)\\
+r^n &amp;= \rho\\
+\exp(n \theta i) &amp;= \exp(\varphi i)
+\end{align}\]</div>
+<p>We notice that the angle <span class="math notranslate nohighlight">\(\exp(n\theta i)\)</span> should equal to <span class="math notranslate nohighlight">\(\exp(i\varphi)\)</span> or multiples of <span class="math notranslate nohighlight">\(\pi\)</span> such that <span class="math notranslate nohighlight">\(n\theta = \varphi + 2k\pi\)</span> thus <span class="math notranslate nohighlight">\(r=\sqrt[n]{p}\)</span> and <span class="math notranslate nohighlight">\(n \theta = \varphi + 2k\pi, \quad k \in \mathbb{Z}\)</span>, so <span class="math notranslate nohighlight">\(\theta=\dfrac{\varphi}{n}+\dfrac{2k\pi}{n}, \quad k=0,1,\cdots, n-1\)</span>, such that when <span class="math notranslate nohighlight">\(k-n\)</span> we get <span class="math notranslate nohighlight">\(\theta = \dfrac{\varphi}{2}+2\pi\)</span>, thus we get our solution by writing:</p>
+<div class="math notranslate nohighlight">
+\[
+w^{\frac{1}{n}}= \sqrt[n]{\rho}\cdot \exp(\frac{\varphi}{n}+\frac{2k\pi}{n}i), \quad k=0,1,\cdots, n-1
+\]</div>
+<p>One special root is the <strong>Principle <span class="math notranslate nohighlight">\(n^{th}\)</span> root</strong> of <span class="math notranslate nohighlight">\(w\)</span> by choosing <span class="math notranslate nohighlight">\(\varphi = Arg(w)\)</span> and <span class="math notranslate nohighlight">\(k=0\)</span> we obtain:
+$<span class="math notranslate nohighlight">\(
+w= \sqrt[n]{\rho}.\exp(\frac{Arg(w)}{n}i)
+\)</span>$</p>
+<div class="note admonition">
+<p class="admonition-title"> Example:</p>
+<p>Find the radius of all cubed roots of <span class="math notranslate nohighlight">\(5+10i\)</span>
+<strong>Solution:</strong></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Abdalaziz Rashid<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
