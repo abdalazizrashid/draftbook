@@ -47,7 +47,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"b": ["{\\mathbf #1}", 1], "bb": ["{\\mathbb{#1}}", 1], "vertbar": "\\rule[-1ex]{0.5pt}{2.5ex}", "horzbar": "\\rule[.5ex]{2.5ex}{0.5pt}", "distas": ["{\\overset{#1}{\\sim}", 1]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistcal Modeling" href="statistics.html" />
+    <link rel="prev" title="Probability" href="probability.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -97,7 +99,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="linalg.html">
    Linear Algebra
@@ -106,6 +108,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="probability.html">
    Probability
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Complex numbers
   </a>
  </li>
  <li class="toctree-l1">
@@ -309,8 +316,8 @@ y = r \sin \theta = 3 \sin \dfrac{7\pi}{4} = -\dfrac{3}{\sqrt{2}}i\\
 The difference between the argument of <span class="math notranslate nohighlight">\(z\)</span> <span class="math notranslate nohighlight">\(arg\,z\)</span> and the Principle Argument of <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(Arg\,z\)</span> is that <span class="math notranslate nohighlight">\(Arg \, z\)</span> is between <span class="math notranslate nohighlight">\(-\pi &lt; \theta \leq \pi\)</span> and <span class="math notranslate nohighlight">\(arg\,z\)</span> is any value as multiple of <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title"> Example:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9841ec8-9f11-4360-9e60-200e11a37d2a">
-<span class="eqno">()<a class="headerlink" href="#equation-e9841ec8-9f11-4360-9e60-200e11a37d2a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a60b413-1672-46f3-8705-c49c9fb49c86">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2a60b413-1672-46f3-8705-c49c9fb49c86" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;Arg(i) = \dfrac{\pi}{2}\\
 &amp;Arg(1) = 0\\
 &amp;Arg(-1) = \pi\\
@@ -322,29 +329,29 @@ The difference between the argument of <span class="math notranslate nohighlight
 <div class="note admonition">
 <p class="admonition-title"> Example:</p>
 <p>What is the principle argument of:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b882ac6-09fe-43d1-bb12-9f18b99710c6">
-<span class="eqno">()<a class="headerlink" href="#equation-2b882ac6-09fe-43d1-bb12-9f18b99710c6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-728c6674-f04f-4029-aa43-73fc86b8803a">
+<span class="eqno">(3)<a class="headerlink" href="#equation-728c6674-f04f-4029-aa43-73fc86b8803a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;Arg(\cos\dfrac{12\pi}{4} + \sin\dfrac{12\pi}{4}i)\\
 &amp;Arg(\cos\dfrac{-\pi}{18} + \sin\dfrac{-\pi}{18}i)\\
 &amp;Arg(\cos\dfrac{\pi}{3} + \sin\dfrac{\pi}{3}i)\\
 &amp;Arg(\cos\dfrac{-\pi}{18} + \sin\dfrac{-\pi}{18}i)
 \end{align}\]</div>
 <p><strong>Solution:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-573b1989-d7d7-43db-b5c2-a1421e60326c">
-<span class="eqno">()<a class="headerlink" href="#equation-573b1989-d7d7-43db-b5c2-a1421e60326c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cf0b9584-fff0-41aa-b2df-8a212817f3c3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-cf0b9584-fff0-41aa-b2df-8a212817f3c3" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;\cos\dfrac{12\pi}{4} = -1\\
 &amp;\sin\dfrac{12\pi}{4} = 0\\
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-96f02b18-b13a-474a-a9b9-94d24ab53831">
-<span class="eqno">()<a class="headerlink" href="#equation-96f02b18-b13a-474a-a9b9-94d24ab53831" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e4feba1a-17b4-4e10-b604-a61857eebf83">
+<span class="eqno">(5)<a class="headerlink" href="#equation-e4feba1a-17b4-4e10-b604-a61857eebf83" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;\cos\dfrac{-\pi}{18} = \cos -10\\
 &amp;\sin\dfrac{-\pi}{18} = \sin -10\\
 \end{align}\]</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">plot</span> <span class="pre">here</span></code></p>
 <p>Since <span class="math notranslate nohighlight">\(\exp(i \theta) = \cos \theta + \sin \theta i\)</span> thus <span class="math notranslate nohighlight">\(z=r\exp(i\theta)\)</span> note that <span class="math notranslate nohighlight">\(\exp(i(\theta+2\pi)) = \exp(i\theta)) = \exp(i(\theta+4\pi)) = \cdots = \exp(i(\theta+2\pi k))\quad \text{ where } k \in \mathcal{z}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-45f8a04f-eb19-4322-bfb8-0a8a2abcdad8">
-<span class="eqno">()<a class="headerlink" href="#equation-45f8a04f-eb19-4322-bfb8-0a8a2abcdad8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9c2de235-b04a-4139-b3e7-134b976dba0c">
+<span class="eqno">(6)<a class="headerlink" href="#equation-9c2de235-b04a-4139-b3e7-134b976dba0c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;\exp(i\dfrac{\pi}{2}) = i\\
 &amp;\exp(i\pi) = -1\\
 &amp;\exp(i\dfrac{\pi}{4}) = \dfrac{1}{\sqrt{2}}\\
@@ -352,8 +359,8 @@ The difference between the argument of <span class="math notranslate nohighlight
 &amp;\cdots\\
 \end{align}\]</div>
 <p>We can find the inverse of complex number:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6488a19f-34ce-4147-8799-4751f9e4f2e3">
-<span class="eqno">()<a class="headerlink" href="#equation-6488a19f-34ce-4147-8799-4751f9e4f2e3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18a81233-0764-442f-95b5-89937a628a81">
+<span class="eqno">(7)<a class="headerlink" href="#equation-18a81233-0764-442f-95b5-89937a628a81" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dfrac{1}{\exp(i\theta)} &amp;= \dfrac{\overline{ \exp(i\theta) }} {\exp(i\theta) \overline{\exp(i\theta)}}\\
 &amp;=\dfrac{\exp(-i\theta)}{\exp(i\theta)\exp(-i\theta)} = \exp(-i\theta)
 \end{align}\]</div>
@@ -366,8 +373,8 @@ The difference between the argument of <span class="math notranslate nohighlight
 |\exp(i\theta)|=1
 \]</div>
 <p>where the overline <span class="math notranslate nohighlight">\(\overline{a+b\rm{i}}\)</span> means complex conjugate</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d55c5687-d6b4-41be-b0b9-6d8460b7f0b2">
-<span class="eqno">()<a class="headerlink" href="#equation-d55c5687-d6b4-41be-b0b9-6d8460b7f0b2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ed12ec3-2168-4522-9b9d-0306e459bd18">
+<span class="eqno">(8)<a class="headerlink" href="#equation-4ed12ec3-2168-4522-9b9d-0306e459bd18" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \overline{\exp(i\theta)}&amp;= \cos \theta - \sin \theta i\\
 &amp;= cos \theta + sin (-\theta i)\\
 &amp;= cos (-\theta) + sin (-\theta i)\\
@@ -389,14 +396,14 @@ The difference between the argument of <span class="math notranslate nohighlight
 <p>Find <span class="math notranslate nohighlight">\(z_1\cdot z_2\)</span>.</p>
 <p><strong>Solution:</strong>
 First we need to convert to polar coordinates:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f5ecc4e4-d5c3-42bc-bf11-ebf783984d61">
-<span class="eqno">()<a class="headerlink" href="#equation-f5ecc4e4-d5c3-42bc-bf11-ebf783984d61" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-26a51c57-f008-4a46-9721-93326c5c8169">
+<span class="eqno">(9)<a class="headerlink" href="#equation-26a51c57-f008-4a46-9721-93326c5c8169" title="Permalink to this equation">¶</a></span>\[\begin{align}
 r &amp;= \sqrt{\left(\dfrac{\sqrt{2}}{2}\right)^2+\left(\dfrac{\sqrt{2}}{2}\right)^2}=1\\
 \theta  &amp;= \tan^{-1} \dfrac{x}{y}\\
 &amp;= \tan^{-1} \dfrac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} = \dfrac{\pi}{4}
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-2e548bc3-7f5d-4ca7-9e85-e89f01f573c7">
-<span class="eqno">()<a class="headerlink" href="#equation-2e548bc3-7f5d-4ca7-9e85-e89f01f573c7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dd5885d8-f219-40ce-bd60-042dd4a6202d">
+<span class="eqno">(10)<a class="headerlink" href="#equation-dd5885d8-f219-40ce-bd60-042dd4a6202d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 z_1 &amp;= \exp(\frac{pi}{4}i)\\
 z_2 &amp;= \exp(\frac{pi}{3}i)\\
 z_1 \cdot z_2 &amp;= \exp((\frac{\pi}{4}+\frac{\pi}{3})i)\\ 
@@ -405,16 +412,16 @@ z_1 \cdot z_2 &amp;= \exp((\frac{\pi}{4}+\frac{\pi}{3})i)\\
 </div>
 <div class="section" id="the-argument-of-z">
 <h3>The argument of <span class="math notranslate nohighlight">\(z\)</span><a class="headerlink" href="#the-argument-of-z" title="Permalink to this headline">¶</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-6dd764af-3d77-446b-b783-b0234dfbebfa">
-<span class="eqno">()<a class="headerlink" href="#equation-6dd764af-3d77-446b-b783-b0234dfbebfa" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bda7fc0f-7c30-41ca-b1f7-4ec0bb863317">
+<span class="eqno">(11)<a class="headerlink" href="#equation-bda7fc0f-7c30-41ca-b1f7-4ec0bb863317" title="Permalink to this equation">¶</a></span>\[\begin{align}
 arg(\overline{z}) &amp;= -arg(z)\\
 arg(\dfrac{1}{z}) &amp;= -arg(z)\\
 arg(z_1 \cdot z_2) &amp;= arg(z_1) + arg(z_2)\\
 \end{align}\]</div>
 <div class="section" id="some-equalities">
 <h4>Some equalities<a class="headerlink" href="#some-equalities" title="Permalink to this headline">¶</a></h4>
-<div class="amsmath math notranslate nohighlight" id="equation-1d5e75d0-2699-4395-9126-dd64b4f54d08">
-<span class="eqno">()<a class="headerlink" href="#equation-1d5e75d0-2699-4395-9126-dd64b4f54d08" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-502312c7-75f0-4abf-a163-d5af7ee18cd4">
+<span class="eqno">(12)<a class="headerlink" href="#equation-502312c7-75f0-4abf-a163-d5af7ee18cd4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 &amp;arg(i^2) = arg(-1) = \pi\\
 &amp;arg(\dfrac{\pi}{2}) = arg(\dfrac{\pi}{2}) = \pi\\
 &amp;arg(-1^2)=arg(1)=0\\
@@ -469,14 +476,14 @@ r &amp;= \sqrt{1 + i} = \sqrt{2}\\
 <p>Let <span class="math notranslate nohighlight">\(w \in \mathbb{C}\)</span>. An <span class="math notranslate nohighlight">\(n^{th}\)</span> root of <span class="math notranslate nohighlight">\(w\)</span> is a complex number <span class="math notranslate nohighlight">\(z\)</span> such that <span class="math notranslate nohighlight">\(z^n = w\)</span></p>
 </div>
 <p>We notice that if <span class="math notranslate nohighlight">\(w\neq 0\)</span> there are exactly <span class="math notranslate nohighlight">\(n\)</span> distinct <span class="math notranslate nohighlight">\(n^{th}\)</span> roots. We use the Polar form for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(z\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b2befe4-106f-4deb-86d4-99790afa4aeb">
-<span class="eqno">()<a class="headerlink" href="#equation-6b2befe4-106f-4deb-86d4-99790afa4aeb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-99c836c3-3be9-48fb-a3bc-844fe28e4697">
+<span class="eqno">(13)<a class="headerlink" href="#equation-99c836c3-3be9-48fb-a3bc-844fe28e4697" title="Permalink to this equation">¶</a></span>\[\begin{align}
 w &amp;= \rho\exp(\varphi i)\\
 z &amp;=  r \exp(\theta i)
 \end{align}\]</div>
 <p>Thus the equation <span class="math notranslate nohighlight">\(z^n=w\)</span> becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7001380b-576a-4c46-b25f-09ac435b65e7">
-<span class="eqno">()<a class="headerlink" href="#equation-7001380b-576a-4c46-b25f-09ac435b65e7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-54bc105c-b2a2-4afa-9eb6-0ab378c7804a">
+<span class="eqno">(14)<a class="headerlink" href="#equation-54bc105c-b2a2-4afa-9eb6-0ab378c7804a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 r^n \exp(n \theta i) &amp;= \rho \exp(\varphi i)\\
 r^n &amp;= \rho\\
 \exp(n \theta i) &amp;= \exp(\varphi i)
@@ -526,6 +533,8 @@ w= \sqrt[n]{\rho}.\exp(\frac{Arg(w)}{n}i)
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="probability.html" title="previous page">Probability</a>
+    <a class='right-next' id="next-link" href="statistics.html" title="next page">Statistcal Modeling</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
