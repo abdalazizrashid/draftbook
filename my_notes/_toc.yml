@@ -1,5 +1,7 @@
 - file: intro.md
 - file: chapters/linalg.rst
 - file: chapters/probability.rst
+- file: chapters/Untitled1.ipynb
+
 - file: chapters/statistics.rst
 - file: chapters/mcmc.rst
