@@ -1,0 +1,174 @@
+\documentclass{caesar_book}
+\input{premable.tex}
+\input{math_commands.tex}
+\makeatother
+
+\begin{document}
+% no page numbering in front matter
+\frontmatter
+% generate the title page
+% \maketitlepage
+% show the table of contents
+% \listoftodos
+% \tableofcontents
+% start to number the pages
+\mainmatter
+% The first chapter with annotation and citations
+\chapter{Complex Numbers}
+
+\section{Topology In The Plane}
+\todo{Title should be rethinked \ldots}
+\subsection{Modulus of complex numbers}
+Say we have circle in the complex plane with center $z_0 = x_0 +y_0 \im$ and a radius $r$ where 
+    \begin{align*}
+        &B_r(z_0) = {z \in \sC: \, \|z-z_0\| < r} &&
+            \text{disk of radius $r$, centered at $z_0$}\\
+        &K_r(z_0) = {z \in \sC: \, \|z-z_0\| = 0} &&
+            \text{circle of radius $r$, centered  $z_0$}
+    \end{align*}
+where $d$ is the distance between two points given by the Pythagorean theorem
+    \begin{align*}
+     d &= \sqrt{\left( x-x_0 \right)^2+\left( y-y_0 \right)^2 }\\
+       &= \|\left( x-x_0 \right) + \left( y - y_0 \right)\im \|\\
+       &= \|z-z_0\|
+    \end{align*}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{distance}
+    \caption{Distance between two points}
+    \label{fig:distance}
+\end{figure}
+
+\subsection{Interior Points and Boundary Points}
+\begin{definition}[Interior Points]
+    Let $E \subset \sC$.  $A$ point  $z_0$ is an interior point of  $E$ if there
+    is some  $r > 0$ such that  $B_r(Z_0) \subset E$.
+\end{definition}
+
+\begin{definition}[Boundary Points]
+    Let $E \subset \sC$. A point $b$ is a boundary point of  $E$ if every disk around  $b$ contains a point in  $E$ and a point not in  $E$.\\
+    The boundary of the set  $E \subset \sC$, $\partial E$, is the set of all boundary points of $E$
+\end{definition}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{interior_points}
+    \caption{Interior and boundary points of the set $S$: black disk represent the interior points and the red disk represent the boundary points}
+    \label{fig:interior_points}
+\end{figure}
+\begin{definition}[Open and closed sets]
+    A set $U \subset \sC$ is \emph{open} if every one of its points is an
+    interior point. \\
+    A set $A \subset \sC$ is \emph{closed} if it contains all of its boundary
+    points.
+\end{definition}
+
+\subsection{Open and Closed Sets}
+\begin{itemize}
+    \item $\{z \in \sC:\, \|z-z_0\| < r \}$ and $\{z \in \sC:\, \|z-z_0\|>r \}$ are open.
+    \item $\{z \in \sC:\, \|z-z_0\| \le r \}$ and $\{z \in \sC:\, \|z-z_0\| = r \}$ are closed.
+    \item $\sC$ and $\emptyset$ are open and closed.
+    \item $\{z \in \sC:\, \|z-z_0\| \le r \} \cup  \{z \in \sC:\, \|z-z_0\| = r \text{ and } \rm{Im}(z-z_0) > 0 \}$ is neither open nor closed.
+\end{itemize}
+
+The set $\{ z \in, \|z\| < 1\} \cup \{z \in \sC, \|z\|>2\}$ is also open and
+closed, in fact this set is $\emptyset$ as there are no point in the complex
+plane whose modulus is both $<1$ and  $>2$ at the same time. For the sake of
+contradiction say that  
+    $\exists z \in \{z \in \sC, \|z\| < 1 \} \cup \{z \in \sC, \|z\| > 2\}$. This implies we have $\|z\|<1$ and $\|z>2\| \iff 2 < \|z\| < 1$! thus it is a false statement, because $\emptyset = \overline{\sC}$ is open and close.
+
+A set can be neither open nor closed when it does not contain all of its
+boundary points. as for instance, $1+\im$ is a boundary point but does not
+belong to the set. However, $0$ is an element of the set but not an interior
+point,since for ever $\epsilon > 0$, the disk  $B_{\epsilon}(0)$ is not
+entirely contained in the set.Thus the set is neither open nor closed. 
+
+The set $\sC$ is open and closed, since  $\overline{\sC}=\sC$, so $\sC$ contains all of
+its boundary points, thus it is closed. And $\forall z \in \sC$, there is an
+instance $B_1(z) \subset \sC$, this implies the set is also open.
+
+\subsection{Closure and Interior of a Set}
+A closure of a set the itself with all its boundary points, and with the same intuition we can make a set open (interior) by excluding all its boundary points.
+\begin{definition}
+    Let $E \in \sC$.\\
+    The \emph{closure} of $E$ is the set  $E$ together with all its boundary points: $\overline{E} = E \cup \partial E$.
+The \emph{interior} of $E$,  $\mathring{E}$ is the set of all interior point of $E$.
+\end{definition}
+
+\begin{texample}
+    \begin{itemize}
+        \item $\overline{B_r(z_0)} = B_r(z_0) \cup K_r(z_0) = \{z \in \sC:
+            \|z-z_0\| \le r\}  $.\\
+            The closure of of the disk $r$ centered at  $z_0$ is the disk $B_r$
+            of radius  $r$ and the circle $K_r$.
+        \item $\overline{K_r(z_0)=K_r(z_0)}$.\\
+            The closure of the circle is the circle itself, since it contains
+            all its boundary points.
+        \item $\overline{B_r(z_0) \setminus  \{z_0\} } = \{z \in \sC :
+            \|z-z_0\| \le r\}. $\\
+            The disk $B_r$ excluding its center, when taking its closure, the
+            closure will bring the center back in the set. 
+        \item $E=\{z \in \sC : \|z-z_0\| \le r\} $, $\mathring{E}=B_r(z_0)$.\\
+            The interior of the set  $E$ is disk  $B_r$ of radius  $r$.
+        \item  $E = K_r(z_0)$,  $\mathring{E} = \emptyset$.\\            There is no point on the circle  $K_r$ that we can fit a disk with the center  $r$.
+    \end{itemize} 
+\end{texample}
+
+\subsection{Connectedness}
+Informally the set is connected if it is a single piece.
+\begin{definition}[Connectedness of sets]
+    Two sets $X, Y \in \sC$ are separated if there are disjoint open set $U, V$ so that  $X \subset U$ and  $Y \subset V$.\\
+   A set  $W \in \sC$ is connected if it is impossible to find two separated non-empty sets whose union equals $W$.
+        
+\end{definition}
+\marginpar{Two sets is said to be disjoint if $A \cap B = \emptyset$.}
+
+\begin{texample}
+$X = \left[0, \right) \text{ and } Y=\left(1, 2\right)$
+are separated. Say that $U=B_1(0)$ and  $V=B_1(2)$. Thus  $X \cup Y=\left[ 0,1 \right] \setminus \{1\}$ is not connected.
+\begin{center}
+    \incfig{connecteness_of_sets}
+\end{center}
+\end{texample}
+\marginpar{It is hard to check whether a set is connected.}
+
+For the open set it is easier to check whether a set is connected or not:
+\begin{definition}
+   Let $G$  be an open set in $\sC$. Then $G$ is connected if and only of any two points in  $G$ can be joined  $G$ by successive line segments.
+\end{definition}[Connectedness of open set]
+\begin{figure}[ht]
+    \centering
+    \incfig{connectedness_open_set}
+    \caption{Connectedness in open set: The theorem above tell us that if we can connect two points in $G$ by line segments then the set is connected}
+    \label{fig:connectedness_open_set}
+\end{figure}
+
+\begin{definition}[Bounded sets]
+    A set $A \in \sC$ is \emph{bounded} if there exists a number $R>0$ such that $A \subset B_R(0)$. If no such  $R$ exists then $A$ is called \emph{unbounded}.
+\end{definition}
+\begin{figure}[ht]
+    \centering
+    \incfig{bounded_set}
+    \caption{Bounded set $G$: The circle has large enough radius $R$ to include all the set}
+    \label{fig:bounded_set}
+\end{figure}
+
+\marginpar{In $\sR$, there are to directions for infinity $\mp \infty$.\\ And $\in \sC$ there is only one $\infty$ which can be attained in many directions}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{unbounded_set}
+    \caption{Unbounded set: There is no circle of radius $R$ can bound all the set  $G$. Such unbounded set is the complex plane or the real plane all these are unbounded sets}
+    \label{fig:unbounded_set}
+\end{figure}
+\begin{texample}
+    Which of the fallowing radii $R$ satisfy that the disk or radius 2, centered at  $\im$, is contained in the disk of radius  $R$, centered at the origin?
+
+    The disk or radius  2, centered at $\im$ is the set  $\{z \in \sC, \|z-i\| < 2\} $.\\
+    Let $z\in \{z\in \sC, \|z-i\|< 2\} $. Using triangle inequality, we have $\|z\|=\|z-i+i\|\le \|z-i\|+ \|i\|$. But we know $\|z-i\|<2$, and $\|i\|=1$.\\
+    so $\|z\| < 2 + 1 = 3$. Thus for $R\ge 3$, if $z \in \{z \in \sC, \|z-i\|<2\}$ thus $\{z\in\sC,\|z-i<2\|\}$ is contained in all disks centered at the origin, of radii $R\ge 3$.
+        
+\end{texample}
+\end{document}
+

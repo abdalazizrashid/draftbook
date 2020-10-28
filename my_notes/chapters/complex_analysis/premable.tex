@@ -1,0 +1,89 @@
+\usepackage[english]{babel}
+\usepackage{todonotes}
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{amssymb}
+\usepackage{amsmath, amssymb}
+\usepackage{transparent}
+\usepackage{textcomp}
+\pdfsuppresswarningpagegroup=1
+
+\title{My Notes}
+\author{Abdalaziz Rashid}
+
+\newcommand{\im}{\rm{i}}
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+\usepackage[most]{tcolorbox}
+\usepackage{chngcntr}
+\usepackage{lipsum}
+
+% counters
+\newcounter{theorem}
+\newcounter{definition}
+\counterwithin{theorem}{chapter}
+\counterwithin{definition}{chapter}
+
+% names for the structures
+\newcommand\theoname{Theorem}
+\newcommand\defname{Definition}
+
+\makeatletter
+
+% environment for theorems
+\newtcolorbox{theorem}[1][]{
+breakable,
+enhanced,
+colback=blue!05,
+colframe=orange,
+top=\baselineskip,
+enlarge top by=\topsep,
+overlay unbroken and first={
+  \node[xshift=10pt,thick,draw=blue,fill=blue!20,rounded corners,anchor=west] at (frame.north west) %
+  {\refstepcounter{theorem}\strut{\bfseries\theoname~\thetheorem}\if#1\@empty\relax\relax\else~(#1)\fi};
+  }
+}
+
+% environment for lemas
+\newtcolorbox{definition}[1][]{
+breakable,
+enhanced,
+colback=red!05,
+colframe=red!70!black,
+top=\baselineskip,
+enlarge top by=\topsep,
+overlay unbroken and first={
+  \node[thick,draw=green!40!black,fill=green!20,rounded corners] at (frame.north) %
+   {\refstepcounter{definition}\strut{\bfseries\defname~\thedefinition}\if#1\@empty\relax\relax\else~(#1)\fi};
+ }
+}
+
+
+%\usepackage[svgnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{shadows}
+
+\newcounter{exa}
+
+\tcbset{
+myexample/.style={
+  enhanced,
+  colback=yellow!10!white,
+  colframe=red!50!black,
+  fonttitle=\scshape,
+  titlerule=0pt,
+  title={\refstepcounter{exa}example~\theexa.},
+  title style={fill=yellow!10!white},
+  coltitle=red!50!black,
+  drop shadow,
+  highlight math style={reset,colback=LightBlue!50!white,colframe=Navy}
+  }
+}
+
+\newtcolorbox{texample}{myexample}
